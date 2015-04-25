@@ -9,11 +9,17 @@
 import Foundation
 import AVFoundation
 
+protocol RecorderDelegate {
+    func finished(file: NSURL)
+}
+
 class VoiceRecorder : NSObject {
     
     var isRecording = false
     
     var fileUrl: NSURL?
+    
+    var delegate: RecorderDelegate?
     
     override init () {
         super.init()
@@ -138,6 +144,7 @@ extension VoiceRecorder : AVAudioRecorderDelegate {
     func audioRecorderDidFinishRecording(recorder: AVAudioRecorder!,
         successfully flag: Bool) {
             println("finished recording \(flag)")
+            delegate?.finished(fileUrl!)
     }
     
     func audioRecorderEncodeErrorDidOccur(recorder: AVAudioRecorder!,
