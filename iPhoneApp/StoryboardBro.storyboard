@@ -1,13 +1,114 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="NimbusSansNovusDOT-Lig.otf">
+            <string>NimbusSansNovusDOT-Lig</string>
+            <string>NimbusSansNovusDOT-Lig</string>
+        </mutableArray>
+        <mutableArray key="NimbusSansNovusDOT-Med.otf">
+            <string>NimbusSansNovusDOT-Med</string>
+            <string>NimbusSansNovusDOT-Med</string>
+        </mutableArray>
+        <mutableArray key="NimbusSansNovusDOT-SemBol.otf">
+            <string>NimbusSansNovusDOT-SemBol</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Root View Controller-->
+        <scene sceneID="J4n-za-0a2">
+            <objects>
+                <tableViewController id="ShR-tR-M3k" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rdq-KC-7vE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oKC-L4-HVH">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oKC-L4-HVH" id="vXS-u0-4nq">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="ftn-9n-Big" kind="show" id="Ivp-Vx-wNY"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ShR-tR-M3k" id="TjS-yY-qhn"/>
+                            <outlet property="delegate" destination="ShR-tR-M3k" id="xSh-kh-FK0"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="TIF-px-P8S"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sYf-iF-TMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1374" y="-61"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="49W-jL-fSb">
+            <objects>
+                <navigationController id="eMv-Bi-bed" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jSZ-RP-LqE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ShR-tR-M3k" kind="relationship" relationship="rootViewController" id="jB9-3W-A5n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="thm-gu-6c8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1986" y="-61"/>
+        </scene>
+        <!--Shop Details View-->
+        <scene sceneID="7nh-Tl-glE">
+            <objects>
+                <viewController title="Shop Details View" id="ftn-9n-Big" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kjS-2O-QPZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="p7V-zt-uRf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iFY-67-RdG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="kNe-VY-NYW" kind="show" id="Pp3-Lt-vye"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTC-pE-pUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-732" y="-61"/>
+        </scene>
+        <!--Payment-->
+        <scene sceneID="uE7-LR-2Sb">
+            <objects>
+                <viewController title="Payment" id="kNe-VY-NYW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MUp-Ak-hoB"/>
+                        <viewControllerLayoutGuide type="bottom" id="pqZ-bW-fZO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UEZ-s2-5e2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMw-Cb-bFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-85" y="-61"/>
+        </scene>
+        <!--Success-->
         <scene sceneID="iaL-bY-3Ua">
             <objects>
-                <viewController id="MU8-1Q-bGU" sceneMemberID="viewController">
+                <viewController title="Success" id="MU8-1Q-bGU" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3YQ-bp-ifF"/>
                         <viewControllerLayoutGuide type="bottom" id="I0v-SA-t4e"/>
@@ -16,11 +117,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Success" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijp-O3-UaK">
-                                <rect key="frame" x="0.0" y="116" width="414" height="85"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Success!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijp-O3-UaK">
+                                <rect key="frame" x="0.0" y="111" width="414" height="85"/>
+                                <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Lig" family="Nimbus Sans Novus D OT" pointSize="33"/>
+                                <color key="textColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shop-icon" translatesAutoresizingMaskIntoConstraints="NO" id="QMt-cI-u1G">
+                                <rect key="frame" x="175" y="54" width="65" height="65"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xbr-0O-5DY">
+                                <rect key="frame" x="187" y="666" width="40" height="40"/>
+                                <state key="normal" title="Button" image="tick-good-3x">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jMy-Lx-VEk">
+                                <rect key="frame" x="0.0" y="285" width="414" height="345"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STORE DETAILS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fb-Du-J0J">
+                                        <rect key="frame" x="25" y="20" width="78" height="21"/>
+                                        <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Lig" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fredericks of Wood Green LTD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8d-hO-KEg">
+                                        <rect key="frame" x="25" y="45" width="367" height="21"/>
+                                        <fontDescription key="fontDescription" name="NimbusSansNovusDOT-SemBol" family="Nimbus Sans Novus D OT" pointSize="16"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="389 High Rd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tS-jZ-MrD">
+                                        <rect key="frame" x="25" y="67" width="367" height="21"/>
+                                        <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Med" family="Nimbus Sans Novus D OT" pointSize="16"/>
+                                        <color key="textColor" red="0.30980392156862746" green="0.29803921568627451" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="London, England" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Mf-yI-lGr">
+                                        <rect key="frame" x="25" y="89" width="367" height="21"/>
+                                        <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Med" family="Nimbus Sans Novus D OT" pointSize="16"/>
+                                        <color key="textColor" red="0.30980392159999998" green="0.29803921570000003" blue="0.29803921570000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" showsUserLocation="YES" showsBuildings="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7M-3Q-oLV">
+                                        <rect key="frame" x="0.0" y="128" width="414" height="217"/>
+                                    </mapView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" minimumScaleFactor="1" preferredMaxLayoutWidth="301" translatesAutoresizingMaskIntoConstraints="NO" id="LoP-lV-vz4">
+                                <rect key="frame" x="55" y="184" width="305" height="72"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">You are item will be waiting for collection in the store. We also sent you an reciepe for the item to the email: brave.pineapple@gmail.com</string>
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="15" name="NimbusSansDOT-Regu"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -32,4 +189,8 @@
             <point key="canvasLocation" x="528" y="-61"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="shop-icon" width="65" height="65"/>
+        <image name="tick-good-3x" width="40" height="40"/>
+    </resources>
 </document>
