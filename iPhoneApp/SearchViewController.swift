@@ -31,7 +31,7 @@ class SearchViewController: UIViewController {
     @IBAction func micClicked(sender: AnyObject) {
         if voiceRecorder.isRecording {
             voiceRecorder.stop()
-            
+            communicator.sendVoice(voiceRecorder.fileUrl!)
         } else {
             blackenView()
             voiceRecorder.record()

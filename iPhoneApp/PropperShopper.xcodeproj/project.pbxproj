@@ -20,6 +20,7 @@
 		4D7162E51AEBFE2A00ED9B14 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7162DB1AEBFDCA00ED9B14 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D7162E71AEBFED700ED9B14 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7162E61AEBFED700ED9B14 /* SwiftyJSON.swift */; };
 		4D7162E91AEC124300ED9B14 /* VoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7162E81AEC124300ED9B14 /* VoiceRecorder.swift */; };
+		4D7162EB1AEC1F8D00ED9B14 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7162EA1AEC1F8D00ED9B14 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		4D7162D31AEBFDCA00ED9B14 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		4D7162E61AEBFED700ED9B14 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		4D7162E81AEC124300ED9B14 /* VoiceRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceRecorder.swift; sourceTree = "<group>"; };
+		4D7162EA1AEC1F8D00ED9B14 /* File.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 				4D7162C31AEBD63E00ED9B14 /* SearchViewController.swift */,
 				4D7162E81AEC124300ED9B14 /* VoiceRecorder.swift */,
 				4D7162CB1AEBF9E800ED9B14 /* Communicator.swift */,
+				4D7162EA1AEC1F8D00ED9B14 /* File.swift */,
 				4D7162CD1AEBF9EF00ED9B14 /* Item.swift */,
 				4D7162C41AEBD63E00ED9B14 /* SearchViewController.xib */,
 				4D5C871F1AEBD3B900D3A362 /* AppDelegate.swift */,
@@ -339,6 +342,7 @@
 				4D7162C51AEBD63E00ED9B14 /* SearchViewController.swift in Sources */,
 				4D7162CE1AEBF9EF00ED9B14 /* Item.swift in Sources */,
 				4D7162E71AEBFED700ED9B14 /* SwiftyJSON.swift in Sources */,
+				4D7162EB1AEC1F8D00ED9B14 /* File.swift in Sources */,
 				4D7162C01AEBD59900ED9B14 /* Daddy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
