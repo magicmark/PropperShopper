@@ -1,7 +1,9 @@
 'use strict';
 
 var app = require('express')();
+var bodyParserd = require('body-parser');
 
+app.use(bodyParser.urlencoded({extended:false}));
 var bindRoutes = require('./routes')(app);
 
 var port = Number(5000);
