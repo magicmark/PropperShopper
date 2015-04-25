@@ -68,7 +68,7 @@
                     <rect key="frame" x="21" y="381" width="103" height="1"/>
                     <color key="backgroundColor" red="0.46666666666666667" green="0.74117647058823533" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2 AA Batteries" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="xvo-DG-vkj">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Cristiano Cakes" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="xvo-DG-vkj">
                     <rect key="frame" x="21" y="346" width="313" height="30"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="NimbusSansNovusDOT-SemBol" family="Nimbus Sans Novus D OT" pointSize="29"/>
@@ -105,7 +105,7 @@
     <resources>
         <image name="go" width="28" height="47"/>
         <image name="logo" width="280" height="281"/>
-        <image name="micoff" width="122" height="122"/>
+        <image name="micoff" width="40" height="40"/>
         <image name="tag" width="700" height="165"/>
         <image name="topBG" width="1125" height="869"/>
     </resources>
