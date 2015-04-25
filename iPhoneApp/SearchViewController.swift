@@ -96,6 +96,10 @@ extension SearchViewController: CommunicatorDelegate {
         })
         
         
+        var item = Item(name: "Dildo", quantity: 28, qualifier: "Pink")
+        
+        confirmItem.setItem(item)
+        
         UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             
             self.confirmItem.view.frame = CGRectMake(0, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
