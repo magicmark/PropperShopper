@@ -2,6 +2,9 @@
 
 var app = require('express')();
 var bodyParser = require('body-parser');
+var busboy = require('connect-busboy');
+
+app.use(busboy()); 
 
 app.use(bodyParser.urlencoded({extended:false}));
 var bindRoutes = require('./routes')(app);

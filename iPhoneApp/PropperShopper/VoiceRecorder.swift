@@ -13,7 +13,7 @@ class VoiceRecorder : NSObject {
     
     var isRecording = false
     
-    var fileName: String?
+    var fileUrl: NSURL?
     
     override init () {
         super.init()
@@ -86,7 +86,7 @@ class VoiceRecorder : NSObject {
             recorder.prepareToRecord() // creates/overwrites the file at soundFileURL
         }
         
-        fileName = currentFileName;
+        fileUrl = soundFileURL;
     }
     
     func setSessionPlayAndRecord() {
