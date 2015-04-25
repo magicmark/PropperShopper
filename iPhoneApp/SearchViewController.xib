@@ -6,8 +6,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="PropperShopper" customModuleProvider="target">
             <connections>
+                <outlet property="bottomBlacker" destination="3dq-mU-k2c" id="rbo-Hj-iU5"/>
+                <outlet property="listeningLabel" destination="Fwy-5h-eoX" id="1UX-6s-hh8"/>
                 <outlet property="micButton" destination="feX-Nl-U9g" id="tdq-X8-HSw"/>
-                <outlet property="searchField" destination="Rjf-kK-64A" id="GsL-jb-SCu"/>
+                <outlet property="searchField" destination="xvo-DG-vkj" id="mEF-Ir-81S"/>
+                <outlet property="textSearchEnter" destination="jm5-EP-tnx" id="kB6-N4-6E8"/>
+                <outlet property="topBlacker" destination="QJ5-SX-kW3" id="iZA-5f-kkz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,30 +21,62 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="serachfood" translatesAutoresizingMaskIntoConstraints="NO" id="E4B-dD-MpL">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="642"/>
+                    <rect key="frame" x="-10" y="0.0" width="424" height="320"/>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rjf-kK-64A">
-                    <rect key="frame" x="66" y="281" width="283" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
                 <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feX-Nl-U9g">
-                    <rect key="frame" x="0.0" y="641" width="414" height="95"/>
+                    <rect key="frame" x="187" y="467" width="30" height="30"/>
                     <color key="backgroundColor" red="0.41176474089999998" green="0.90196084980000002" blue="0.4274510145" alpha="1" colorSpace="deviceRGB"/>
-                    <inset key="contentEdgeInsets" minX="190" minY="35" maxX="190" maxY="30"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
                     <state key="normal" image="mic">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="micClicked:" destination="-1" eventType="touchUpInside" id="0qX-e3-cWB"/>
+                    </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What do you need?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAc-gr-Gdz">
-                    <rect key="frame" x="66" y="220" width="310" height="67"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I AM LOOKING FOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7M-SF-Qnq">
+                    <rect key="frame" x="33" y="346" width="191" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="or" translatesAutoresizingMaskIntoConstraints="NO" id="v7x-bb-ZKm">
-                    <rect key="frame" x="174" y="605" width="66" height="66"/>
-                </imageView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acF-St-ckQ">
+                    <rect key="frame" x="33" y="434" width="103" height="2"/>
+                    <color key="backgroundColor" red="0.41176474089999998" green="0.90196084980000002" blue="0.4274510145" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rwR-B6-dRI">
+                    <rect key="frame" x="136" y="434" width="245" height="2"/>
+                    <color key="backgroundColor" red="0.27058824896812439" green="0.22745099663734436" blue="0.074509806931018829" alpha="1" colorSpace="deviceRGB"/>
+                </view>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2 AA Batteries" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="xvo-DG-vkj">
+                    <rect key="frame" x="33" y="394" width="313" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jm5-EP-tnx">
+                    <rect key="frame" x="354" y="394" width="30" height="30"/>
+                    <state key="normal" title="&gt;">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wga-Dm-6mi">
+                    <rect key="frame" x="0.0" y="523" width="414" height="213"/>
+                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3dq-mU-k2c">
+                    <rect key="frame" x="0.0" y="523" width="414" height="213"/>
+                    <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                </view>
+                <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJ5-SX-kW3">
+                    <rect key="frame" x="0.0" y="-1" width="414" height="321"/>
+                    <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                </view>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Listening..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwy-5h-eoX">
+                    <rect key="frame" x="148" y="398" width="108" height="21"/>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -48,7 +84,6 @@
     </objects>
     <resources>
         <image name="mic" width="256" height="256"/>
-        <image name="or" width="200" height="200"/>
         <image name="serachfood" width="3264" height="2448"/>
     </resources>
 </document>
