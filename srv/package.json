@@ -7,6 +7,7 @@
     "body-parser": "^1.12.3",
     "connect-busboy": "0.0.2",
     "express": "^4.12.3",
+    "googleplaces": "^0.4.1",
     "jshint": "^2.7.0",
     "node-wit": "^2.0.0",
     "q": "^1.2.0",
@@ -18,5 +19,28 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "jshintConfig": {
+    "strict": true,
+    "node": true,
+    "quotmark": false,
+    "unused": false,
+    "newcap": false,
+    "multistr": true,
+    "evil": true,
+    "eqnull": true,
+    "scripturl": true,
+    "globals": {
+      "jasmine": false,
+      "beforeEach": false,
+      "afterEach": false,
+      "describe": false,
+      "it": false,
+      "xit": false,
+      "xdescribe": false,
+      "expect": false,
+      "spyOn": false,
+      "window": false
+    }
+  }
 }
