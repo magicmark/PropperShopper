@@ -3,6 +3,11 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="NimbusSansNovusDOT-SemBol.otf">
+            <string>NimbusSansNovusDOT-SemBol</string>
+        </mutableArray>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="PropperShopper" customModuleProvider="target">
             <connections>
@@ -20,8 +25,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="serachfood" translatesAutoresizingMaskIntoConstraints="NO" id="E4B-dD-MpL">
-                    <rect key="frame" x="-10" y="0.0" width="424" height="320"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="topBG" translatesAutoresizingMaskIntoConstraints="NO" id="E4B-dD-MpL">
+                    <rect key="frame" x="0.0" y="0.0" width="439" height="320"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feX-Nl-U9g">
                     <rect key="frame" x="187" y="467" width="30" height="30"/>
@@ -50,7 +55,7 @@
                 </view>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2 AA Batteries" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="xvo-DG-vkj">
                     <rect key="frame" x="33" y="394" width="313" height="30"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                    <fontDescription key="fontDescription" name="NimbusSansNovusDOT-SemBol" family="Nimbus Sans Novus D OT" pointSize="29"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jm5-EP-tnx">
@@ -67,23 +72,30 @@
                     <rect key="frame" x="0.0" y="523" width="414" height="213"/>
                     <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
                 </view>
-                <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJ5-SX-kW3">
-                    <rect key="frame" x="0.0" y="-1" width="414" height="321"/>
-                    <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                </view>
                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Listening..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwy-5h-eoX">
                     <rect key="frame" x="148" y="398" width="108" height="21"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJ5-SX-kW3">
+                    <rect key="frame" x="0.0" y="-1" width="414" height="321"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="9ff-aT-gaU">
+                            <rect key="frame" x="162" y="86" width="90" height="90"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="340" y="349"/>
         </view>
     </objects>
     <resources>
+        <image name="logo" width="280" height="281"/>
         <image name="mic" width="256" height="256"/>
-        <image name="serachfood" width="3264" height="2448"/>
+        <image name="topBG" width="1125" height="869"/>
     </resources>
 </document>

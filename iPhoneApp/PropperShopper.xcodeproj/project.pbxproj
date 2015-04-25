@@ -20,6 +20,10 @@
 		4D7162E51AEBFE2A00ED9B14 /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7162DB1AEBFDCA00ED9B14 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4D7162E71AEBFED700ED9B14 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7162E61AEBFED700ED9B14 /* SwiftyJSON.swift */; };
 		4D7162E91AEC124300ED9B14 /* VoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7162E81AEC124300ED9B14 /* VoiceRecorder.swift */; };
+		4D7162ED1AEC3C9900ED9B14 /* NimbusSansNovusDOT-SemBol.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7162EC1AEC3C9900ED9B14 /* NimbusSansNovusDOT-SemBol.otf */; };
+		4D7162F11AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7162EE1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf */; };
+		4D7162F21AEC3CF400ED9B14 /* NimbusSansNovusDOT-Med.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7162EF1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Med.otf */; };
+		4D7162F31AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7162F01AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +103,10 @@
 		4D7162D31AEBFDCA00ED9B14 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		4D7162E61AEBFED700ED9B14 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		4D7162E81AEC124300ED9B14 /* VoiceRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceRecorder.swift; sourceTree = "<group>"; };
+		4D7162EC1AEC3C9900ED9B14 /* NimbusSansNovusDOT-SemBol.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-SemBol.otf"; sourceTree = "<group>"; };
+		4D7162EE1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-Lig.otf"; sourceTree = "<group>"; };
+		4D7162EF1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Med.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-Med.otf"; sourceTree = "<group>"; };
+		4D7162F01AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-Reg.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +149,10 @@
 		4D5C871C1AEBD3B900D3A362 /* PropperShopper */ = {
 			isa = PBXGroup;
 			children = (
+				4D7162EC1AEC3C9900ED9B14 /* NimbusSansNovusDOT-SemBol.otf */,
+				4D7162EE1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf */,
+				4D7162EF1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Med.otf */,
+				4D7162F01AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf */,
 				4D7162C31AEBD63E00ED9B14 /* SearchViewController.swift */,
 				4D7162E81AEC124300ED9B14 /* VoiceRecorder.swift */,
 				4D7162CB1AEBF9E800ED9B14 /* Communicator.swift */,
@@ -312,7 +324,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7162ED1AEC3C9900ED9B14 /* NimbusSansNovusDOT-SemBol.otf in Resources */,
+				4D7162F31AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf in Resources */,
 				4D5C872A1AEBD3B900D3A362 /* LaunchScreen.xib in Resources */,
+				4D7162F11AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf in Resources */,
+				4D7162F21AEC3CF400ED9B14 /* NimbusSansNovusDOT-Med.otf in Resources */,
 				4D5C87271AEBD3B900D3A362 /* Images.xcassets in Resources */,
 				4D7162C61AEBD63E00ED9B14 /* SearchViewController.xib in Resources */,
 			);

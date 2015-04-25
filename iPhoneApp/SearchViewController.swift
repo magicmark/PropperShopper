@@ -48,7 +48,9 @@ class SearchViewController: UIViewController, RecorderDelegate {
     }
 
     func finished(file: NSURL) {
-        activityIndicator.startAnimating()
+        dispatch_async(dispatch_get_main_queue(), {
+            self.activityIndicator.startAnimating()
+        })
         communicator.sendVoice(file)
         
     }
@@ -69,7 +71,9 @@ class SearchViewController: UIViewController, RecorderDelegate {
 
 extension SearchViewController: CommunicatorDelegate {
     func itemObjectRecieved(data: String) {
-        activityIndicator.stopAnimating()
+        dispatch_async(dispatch_get_main_queue(), {
+            self.activityIndicator.stopAnimating()
+        })
         println(data)
     }
 }
