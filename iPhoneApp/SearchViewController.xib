@@ -4,7 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="NimbusSansNovusDOT-Lig.otf">
+            <string>NimbusSansNovusDOT-Lig</string>
+        </mutableArray>
         <mutableArray key="NimbusSansNovusDOT-SemBol.otf">
+            <string>NimbusSansNovusDOT-SemBol</string>
             <string>NimbusSansNovusDOT-SemBol</string>
         </mutableArray>
     </customFonts>
@@ -12,12 +16,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchViewController" customModule="PropperShopper" customModuleProvider="target">
             <connections>
                 <outlet property="bottomBlacker" destination="3dq-mU-k2c" id="rbo-Hj-iU5"/>
+                <outlet property="iamlokking4" destination="J7M-SF-Qnq" id="ghp-eC-h8f"/>
+                <outlet property="line1" destination="rwR-B6-dRI" id="jIm-Kb-cnO"/>
+                <outlet property="line2" destination="acF-St-ckQ" id="GKp-Fu-zbq"/>
                 <outlet property="listeningLabel" destination="Fwy-5h-eoX" id="1UX-6s-hh8"/>
-                <outlet property="micButton" destination="feX-Nl-U9g" id="tdq-X8-HSw"/>
+                <outlet property="micButton" destination="s6K-0C-nao" id="LVm-DD-6Cf"/>
                 <outlet property="searchField" destination="xvo-DG-vkj" id="mEF-Ir-81S"/>
                 <outlet property="textSearchEnter" destination="jm5-EP-tnx" id="kB6-N4-6E8"/>
                 <outlet property="topBlacker" destination="QJ5-SX-kW3" id="iZA-5f-kkz"/>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="lWG-aq-4QO"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -26,76 +33,80 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="topBG" translatesAutoresizingMaskIntoConstraints="NO" id="E4B-dD-MpL">
-                    <rect key="frame" x="0.0" y="0.0" width="439" height="320"/>
+                    <rect key="frame" x="0.0" y="0.0" width="415" height="290"/>
                 </imageView>
-                <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feX-Nl-U9g">
-                    <rect key="frame" x="187" y="467" width="30" height="30"/>
-                    <color key="backgroundColor" red="0.41176474089999998" green="0.90196084980000002" blue="0.4274510145" alpha="1" colorSpace="deviceRGB"/>
-                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
-                    <state key="normal" image="mic">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tag" translatesAutoresizingMaskIntoConstraints="NO" id="0hS-dD-GgB">
+                    <rect key="frame" x="79" y="198" width="256" height="60"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="9ff-aT-gaU">
+                    <rect key="frame" x="162" y="76" width="91" height="91"/>
+                </imageView>
+                <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJ5-SX-kW3">
+                    <rect key="frame" x="0.0" y="0.0" width="415" height="290"/>
+                    <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I AM LOOKING FOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7M-SF-Qnq">
+                    <rect key="frame" x="21" y="312" width="191" height="21"/>
+                    <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Lig" family="Nimbus Sans Novus D OT" pointSize="15"/>
+                    <color key="textColor" red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s6K-0C-nao">
+                    <rect key="frame" x="181" y="417" width="52" height="52"/>
+                    <state key="normal" image="micoff">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="micClicked:" destination="-1" eventType="touchUpInside" id="0qX-e3-cWB"/>
+                        <action selector="micClicked:" destination="-1" eventType="touchUpInside" id="krm-HL-2Oy"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I AM LOOKING FOR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7M-SF-Qnq">
-                    <rect key="frame" x="33" y="346" width="191" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acF-St-ckQ">
-                    <rect key="frame" x="33" y="434" width="103" height="2"/>
-                    <color key="backgroundColor" red="0.41176474089999998" green="0.90196084980000002" blue="0.4274510145" alpha="1" colorSpace="deviceRGB"/>
-                </view>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rwR-B6-dRI">
-                    <rect key="frame" x="136" y="434" width="245" height="2"/>
-                    <color key="backgroundColor" red="0.27058824896812439" green="0.22745099663734436" blue="0.074509806931018829" alpha="1" colorSpace="deviceRGB"/>
+                    <rect key="frame" x="21" y="381" width="363" height="1"/>
+                    <color key="backgroundColor" red="0.62352941176470589" green="0.62352941176470589" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acF-St-ckQ">
+                    <rect key="frame" x="21" y="381" width="103" height="1"/>
+                    <color key="backgroundColor" red="0.46666666666666667" green="0.74117647058823533" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="2 AA Batteries" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="xvo-DG-vkj">
-                    <rect key="frame" x="33" y="394" width="313" height="30"/>
+                    <rect key="frame" x="21" y="346" width="313" height="30"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" name="NimbusSansNovusDOT-SemBol" family="Nimbus Sans Novus D OT" pointSize="29"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jm5-EP-tnx">
-                    <rect key="frame" x="354" y="394" width="30" height="30"/>
-                    <state key="normal" title="&gt;">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jm5-EP-tnx">
+                    <rect key="frame" x="375" y="353" width="9" height="16"/>
+                    <state key="normal" image="go">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wga-Dm-6mi">
-                    <rect key="frame" x="0.0" y="523" width="414" height="213"/>
-                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="0.0" y="503" width="414" height="233"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3dq-mU-k2c">
-                    <rect key="frame" x="0.0" y="523" width="414" height="213"/>
+                    <rect key="frame" x="0.0" y="503" width="414" height="233"/>
                     <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
                 </view>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Listening..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwy-5h-eoX">
-                    <rect key="frame" x="148" y="398" width="108" height="21"/>
-                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Listening..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fwy-5h-eoX">
+                    <rect key="frame" x="76" y="346" width="263" height="63"/>
+                    <fontDescription key="fontDescription" name="NimbusSansNovusDOT-SemBol" family="Nimbus Sans Novus D OT" pointSize="38"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QJ5-SX-kW3">
-                    <rect key="frame" x="0.0" y="-1" width="414" height="321"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="9ff-aT-gaU">
-                            <rect key="frame" x="162" y="86" width="90" height="90"/>
-                        </imageView>
-                    </subviews>
-                    <color key="backgroundColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+            <nil key="simulatedTopBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <point key="canvasLocation" x="340" y="349"/>
         </view>
     </objects>
     <resources>
+        <image name="go" width="28" height="47"/>
         <image name="logo" width="280" height="281"/>
-        <image name="mic" width="256" height="256"/>
+        <image name="micoff" width="122" height="122"/>
+        <image name="tag" width="700" height="165"/>
         <image name="topBG" width="1125" height="869"/>
     </resources>
 </document>

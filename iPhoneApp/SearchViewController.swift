@@ -18,6 +18,10 @@ class SearchViewController: UIViewController, RecorderDelegate {
     @IBOutlet weak var topBlacker: UIView!
     @IBOutlet weak var bottomBlacker: UIView!
     
+    @IBOutlet var line1: UIView!
+    @IBOutlet var line2: UIView!
+    @IBOutlet weak var iamlokking4: UILabel!
+    
     var voiceRecorder = VoiceRecorder()
     var communicator = Communicator()
     var activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
@@ -41,9 +45,11 @@ class SearchViewController: UIViewController, RecorderDelegate {
     @IBAction func micClicked(sender: AnyObject) {
         if voiceRecorder.isRecording {
             voiceRecorder.stop()
+            micButton.setImage(UIImage(named: "micOff"), forState: .Normal)
         } else {
             blackenView()
             voiceRecorder.record()
+            micButton.setImage(UIImage(named: "micOn"), forState: .Normal)
         }
     }
 
@@ -60,10 +66,13 @@ class SearchViewController: UIViewController, RecorderDelegate {
         UIView.animateWithDuration(0.5, animations: {
             self.bottomBlacker?.alpha = 0.7
             self.topBlacker?.alpha    = 0.7
+            self.line1?.alpha    = 0.0
+            self.line2?.alpha    = 0.0
+            self.iamlokking4?.alpha    = 0.0
+            self.listeningLabel!.alpha = 1
         })
         
         searchField!.hidden = true
-        listeningLabel!.hidden = false
         textSearchEnter!.hidden = true
     }
 

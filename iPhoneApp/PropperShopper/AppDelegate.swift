@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         daddy!.view.frame = UIScreen.mainScreen().bounds;
         window!.rootViewController = daddy!;
         window!.makeKeyAndVisible();
+
+        
         return true
     }
 
