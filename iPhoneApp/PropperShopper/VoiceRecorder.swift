@@ -79,7 +79,7 @@ class VoiceRecorder : NSObject {
             AVEncoderAudioQualityKey : AVAudioQuality.Max.rawValue,
             AVEncoderBitRateKey : 320000,
             AVNumberOfChannelsKey: 2,
-            AVSampleRateKey : 44100.0
+            AVSampleRateKey : 16000
         ]
         
         var error: NSError?

@@ -14,6 +14,7 @@ class Daddy: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
         initSubviewControllers()
         
     }
