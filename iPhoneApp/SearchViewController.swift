@@ -7,32 +7,47 @@
 //
 
 import UIKit
+import Alamofire
 
 class SearchViewController: UIViewController {
 
+    @IBOutlet weak var listeningLabel: UILabel!
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var micButton: UIButton!
+    @IBOutlet weak var textSearchEnter: UIButton!
+    @IBOutlet weak var topBlacker: UIView!
+    @IBOutlet weak var bottomBlacker: UIView!
+    
+    var voiceRecorder = VoiceRecorder()
+    var communicator = Communicator()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+    @IBAction func micClicked(sender: AnyObject) {
+        if voiceRecorder.isRecording {
+            voiceRecorder.stop()
+            
+        } else {
+            blackenView()
+            voiceRecorder.record()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func blackenView () {
+       
+        UIView.animateWithDuration(0.5, animations: {
+            self.bottomBlacker?.alpha = 0.7
+            self.topBlacker?.alpha    = 0.7
+        })
+        
+        searchField!.hidden = true
+        listeningLabel!.hidden = false
+        textSearchEnter!.hidden = true
     }
-    */
 
 }

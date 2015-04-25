@@ -20,6 +20,8 @@ class Daddy: UIViewController {
     
     func initSubviewControllers () {
         searchVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        self.addChildViewController(searchVC!)
+        self.view.addSubview(searchVC!.view)
     }
 
     override func didReceiveMemoryWarning() {
