@@ -24,6 +24,9 @@ class SearchViewController: UIViewController, RecorderDelegate {
     
     var voiceRecorder = VoiceRecorder()
     var communicator = Communicator()
+    var confirmItem = ConfirmItem(nibName: "ConfirmItem", bundle: nil)
+
+
     var activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
     
     override func viewDidLoad() {
@@ -31,6 +34,9 @@ class SearchViewController: UIViewController, RecorderDelegate {
         voiceRecorder.delegate = self
         communicator.delegate = self
         setupActivityIndicator()
+        self.addChildViewController(confirmItem)
+        view.addSubview(confirmItem.view)
+        confirmItem.view.frame = CGRectMake(0, UIScreen.mainScreen().bounds.height, UIScreen.mainScreen().bounds.width,  UIScreen.mainScreen().bounds.height)
     }
 
     func setupActivityIndicator() {
@@ -45,7 +51,8 @@ class SearchViewController: UIViewController, RecorderDelegate {
     @IBAction func micClicked(sender: AnyObject) {
         if voiceRecorder.isRecording {
             voiceRecorder.stop()
-            micButton.setImage(UIImage(named: "micOff"), forState: .Normal)
+            micButton.setImage(UIImage(named: "micoff"), forState: .Normal)
+            itemObjectRecieved("dsfs")
         } else {
             blackenView()
             voiceRecorder.record()
@@ -63,17 +70,21 @@ class SearchViewController: UIViewController, RecorderDelegate {
     
     func blackenView () {
        
+        dispatch_async(dispatch_get_main_queue(), {
+            self.searchField!.hidden = true
+            self.textSearchEnter!.hidden = true
+        })
+        
         UIView.animateWithDuration(0.5, animations: {
             self.bottomBlacker?.alpha = 0.7
             self.topBlacker?.alpha    = 0.7
-            self.line1?.alpha    = 0.0
+            self.line1?.alpha    = 0.0 
             self.line2?.alpha    = 0.0
             self.iamlokking4?.alpha    = 0.0
             self.listeningLabel!.alpha = 1
         })
         
-        searchField!.hidden = true
-        textSearchEnter!.hidden = true
+
     }
 
 }
@@ -83,6 +94,14 @@ extension SearchViewController: CommunicatorDelegate {
         dispatch_async(dispatch_get_main_queue(), {
             self.activityIndicator.stopAnimating()
         })
+        
+        
+        UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            
+            self.confirmItem.view.frame = CGRectMake(0, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
+            
+            }, completion: nil)
+        
         println(data)
     }
 }
