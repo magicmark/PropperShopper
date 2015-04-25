@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, RecorderDelegate {
 
     @IBOutlet weak var listeningLabel: UILabel!
     @IBOutlet weak var searchField: UITextField!
@@ -24,6 +24,7 @@ class SearchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        voiceRecorder.delegate = self
     }
 
     
@@ -31,11 +32,14 @@ class SearchViewController: UIViewController {
     @IBAction func micClicked(sender: AnyObject) {
         if voiceRecorder.isRecording {
             voiceRecorder.stop()
-            communicator.sendVoice(voiceRecorder.fileUrl!)
         } else {
             blackenView()
             voiceRecorder.record()
         }
+    }
+
+    func finished(file: NSURL) {
+        communicator.sendVoice(file)
     }
     
     func blackenView () {

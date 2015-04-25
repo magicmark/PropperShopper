@@ -22,20 +22,16 @@ import Alamofire
 
 class Communicator {
    
-    var server = "http://172.20.10:5000"
+    var server = "http://172.20.10.2:5000"
 
     func generateBoundaryString() -> String {
         return "Boundary-\(NSUUID().UUIDString)"
     }
     
     func sendVoice (file: NSURL) {
+  
         println("sending")
-        
-        let task1 = NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: "\(server)/sendVoice")!) { data, response, error in
-            println(response)
-        }
-        task1.resume()
-        println("sending again")
+                println("sending again")
 
         let boundary = generateBoundaryString()
         let beginningBoundary = "--\(boundary)"
