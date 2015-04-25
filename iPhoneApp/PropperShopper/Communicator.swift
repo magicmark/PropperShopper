@@ -20,10 +20,22 @@
 import Foundation
 import Alamofire
 
-class Communicator {
-   
-    var server = "http://172.20.10.2:5000"
+protocol CommunicatorDelegate {
+    func itemObjectRecieved(data: String)
+}
 
+class Communicator: NSObject {
+   
+//    var server = "http://172.20.10.2:5000"
+    var server = "http://46.101.1.221:5000"
+
+    var delegate: CommunicatorDelegate?
+    
+    override init() {
+        super.init()
+    }
+    
+    
     func generateBoundaryString() -> String {
         return "Boundary-\(NSUUID().UUIDString)"
     }
@@ -31,8 +43,7 @@ class Communicator {
     func sendVoice (file: NSURL) {
   
         println("sending")
-                println("sending again")
-
+ 
         let boundary = generateBoundaryString()
         let beginningBoundary = "--\(boundary)"
         let endingBoundary = "--\(boundary)--"
@@ -60,60 +71,13 @@ class Communicator {
         var task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
             
             println("upload complete")
-            let dataStr = NSString(data: data, encoding: NSUTF8StringEncoding)
-            println(dataStr)
+            let dataStr = NSString(data: data, encoding: NSUTF8StringEncoding)! as String
+            self.delegate?.itemObjectRecieved(dataStr)
             
         })
         
         task.resume()
 
     }
-    
-//    
-//    func sendVoice (file: NSURL) {
-//
-//        let boundary = generateBoundaryString()
-//        
-//        let params = [
-//            "user": "mark"
-//        ]
-//        
-//        let request = NSMutableURLRequest(NSURL(string: "\(server)/sendVoice")!);
-//        request.HTTPMethod = "POST";
-//        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
-////        request.HTTPBody = createBodyWithParameters(params, filePathKey: "file", imageDataKey: imageData, boundary: boundary)
-//
-//
-//    }
-//    
-//    
-//    func createBodyWithParameters(parameters: [String: String]?, filePathKey: String?, imageDataKey: NSData, boundary: String) -> NSData {
-//        
-//        var body = NSMutableData();
-//        
-//        if parameters != nil {
-//            for (key, value) in parameters! {
-//                body.appendString("–\(boundary)\r\n")
-//                body.appendString("Content-Disposition: form-data; name=\"\(key)\"\r\n\r\n")
-//                body.appendString("\(value)\r\n")
-//            }
-//        }
-//        
-//        let filename = “user-profile.jpg”
-//        
-//        let mimetype = “image/jpg”
-//        
-//        body.appendString(“–\(boundary)\r\n”)
-//        body.appendString(“Content-Disposition: form-data; name=\”\(filePathKey!)\”; filename=\”\(filename)\”\r\n”)
-//        body.appendString(“Content-Type: \(mimetype)\r\n\r\n”)
-//        body.appendData(imageDataKey)
-//        body.appendString(“\r\n”)
-//        
-//        body.appendString(“–\(boundary)–\r\n”)
-//        
-//        return body
-//    }
-//    
-
-    
+        
 }

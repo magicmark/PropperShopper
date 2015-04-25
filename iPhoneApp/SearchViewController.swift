@@ -20,13 +20,22 @@ class SearchViewController: UIViewController, RecorderDelegate {
     
     var voiceRecorder = VoiceRecorder()
     var communicator = Communicator()
-    
+    var activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         voiceRecorder.delegate = self
+        communicator.delegate = self
+        setupActivityIndicator()
     }
 
+    func setupActivityIndicator() {
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = .Gray
+        activityIndicator.backgroundColor = UIColor.blueColor()
+        view.addSubview(activityIndicator)
+    }
     
     
     @IBAction func micClicked(sender: AnyObject) {
@@ -39,7 +48,9 @@ class SearchViewController: UIViewController, RecorderDelegate {
     }
 
     func finished(file: NSURL) {
+        activityIndicator.startAnimating()
         communicator.sendVoice(file)
+        
     }
     
     func blackenView () {
@@ -54,4 +65,11 @@ class SearchViewController: UIViewController, RecorderDelegate {
         textSearchEnter!.hidden = true
     }
 
+}
+
+extension SearchViewController: CommunicatorDelegate {
+    func itemObjectRecieved(data: String) {
+        activityIndicator.stopAnimating()
+        println(data)
+    }
 }
