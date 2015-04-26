@@ -9,8 +9,9 @@
 import UIKit
 import Alamofire
 
-class SearchViewController: UIViewController, RecorderDelegate {
+class SearchViewController: UIViewController {
 
+    
     @IBOutlet weak var listeningLabel: UILabel!
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var micButton: UIButton!
@@ -25,18 +26,28 @@ class SearchViewController: UIViewController, RecorderDelegate {
     var voiceRecorder = VoiceRecorder()
     var communicator = Communicator()
     var confirmItem = ConfirmItem(nibName: "ConfirmItem", bundle: nil)
+    var searching = Searching(nibName: "Searching", bundle: nil)
 
 
     var activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpSubviewsAndShit()
+    }
+    
+    func setUpSubviewsAndShit() {
         voiceRecorder.delegate = self
         communicator.delegate = self
+        confirmItem.delegate = self
+        
         setupActivityIndicator()
         self.addChildViewController(confirmItem)
         view.addSubview(confirmItem.view)
+        self.addChildViewController(searching)
+        view.addSubview(searching.view)
         confirmItem.view.frame = CGRectMake(0, UIScreen.mainScreen().bounds.height, UIScreen.mainScreen().bounds.width,  UIScreen.mainScreen().bounds.height)
+        searching.view.frame = CGRectMake(UIScreen.mainScreen().bounds.width, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
     }
 
     func setupActivityIndicator() {
@@ -60,13 +71,7 @@ class SearchViewController: UIViewController, RecorderDelegate {
         }
     }
 
-    func finished(file: NSURL) {
-        dispatch_async(dispatch_get_main_queue(), {
-            self.activityIndicator.startAnimating()
-        })
-        communicator.sendVoice(file)
-        
-    }
+
     
     func blackenView () {
        
@@ -89,6 +94,16 @@ class SearchViewController: UIViewController, RecorderDelegate {
 
 }
 
+extension SearchViewController: RecorderDelegate {
+    func finished(file: NSURL) {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.activityIndicator.startAnimating()
+        })
+        communicator.sendVoice(file)
+        
+    }
+}
+
 extension SearchViewController: CommunicatorDelegate {
     func itemObjectRecieved(data: String) {
         dispatch_async(dispatch_get_main_queue(), {
@@ -106,6 +121,22 @@ extension SearchViewController: CommunicatorDelegate {
             
             }, completion: nil)
         
+        
+        
         println(data)
+    }
+}
+
+extension SearchViewController: ConfirmItemDelegate {
+    func itemConfirmed() {
+        UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            
+            self.confirmItem.view.frame = CGRectMake(0-UIScreen.mainScreen().bounds.width, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
+            self.searching.view.frame = CGRectMake(0, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
+            
+            }, completion: nil)
+    }
+    func itemRejected() {
+        
     }
 }

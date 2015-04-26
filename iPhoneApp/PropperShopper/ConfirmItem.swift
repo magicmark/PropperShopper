@@ -9,6 +9,11 @@
 import UIKit
 import QuartzCore
 
+protocol ConfirmItemDelegate {
+    func itemConfirmed()
+    func itemRejected()
+}
+
 class ConfirmItem: UIViewController {
 
     @IBOutlet weak var quantity: UILabel!
@@ -18,6 +23,9 @@ class ConfirmItem: UIViewController {
     @IBOutlet weak var qualifier: UILabel!
     
     @IBOutlet weak var productShot: UIImageView!
+    
+    var delegate: ConfirmItemDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +39,10 @@ class ConfirmItem: UIViewController {
         quantity.text = "\(item.quantity)"
         name.text = item.name
         qualifier.text = item.qualifier
+    }
+    
+    @IBAction func confirm(sender: AnyObject) {
+        delegate?.itemConfirmed()
     }
     
 

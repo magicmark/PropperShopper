@@ -26,6 +26,8 @@
 		4D7162F31AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7162F01AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf */; };
 		4DF307F61AEC4B2600B5B69B /* ConfirmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF307F41AEC4B2600B5B69B /* ConfirmItem.swift */; };
 		4DF307F71AEC4B2600B5B69B /* ConfirmItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */; };
+		4DF307FC1AEC676600B5B69B /* Searching.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DF307FB1AEC676600B5B69B /* Searching.xib */; };
+		4DF307FE1AEC677400B5B69B /* Searching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF307FD1AEC677400B5B69B /* Searching.swift */; };
 		C5A391271AEC3BF300B1DE6E /* StoryboardBro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A391261AEC3BF300B1DE6E /* StoryboardBro.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +114,8 @@
 		4D7162F01AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-Reg.otf"; sourceTree = "<group>"; };
 		4DF307F41AEC4B2600B5B69B /* ConfirmItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmItem.swift; sourceTree = "<group>"; };
 		4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmItem.xib; sourceTree = "<group>"; };
+		4DF307FB1AEC676600B5B69B /* Searching.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Searching.xib; sourceTree = "<group>"; };
+		4DF307FD1AEC677400B5B69B /* Searching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Searching.swift; path = ../Searching.swift; sourceTree = "<group>"; };
 		C5A391261AEC3BF300B1DE6E /* StoryboardBro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardBro.storyboard; path = ../StoryboardBro.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -166,6 +170,8 @@
 				4D7162C41AEBD63E00ED9B14 /* SearchViewController.xib */,
 				4DF307F41AEC4B2600B5B69B /* ConfirmItem.swift */,
 				4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */,
+				4DF307FD1AEC677400B5B69B /* Searching.swift */,
+				4DF307FB1AEC676600B5B69B /* Searching.xib */,
 				C5A391251AEC3BD100B1DE6E /* Model */,
 				C5A391241AEC3B5900B1DE6E /* View */,
 				C5A391201AEC3B3300B1DE6E /* Controller */,
@@ -359,6 +365,7 @@
 			files = (
 				4D7162ED1AEC3C9900ED9B14 /* NimbusSansNovusDOT-SemBol.otf in Resources */,
 				4DF307F71AEC4B2600B5B69B /* ConfirmItem.xib in Resources */,
+				4DF307FC1AEC676600B5B69B /* Searching.xib in Resources */,
 				4D7162F31AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf in Resources */,
 				4D5C872A1AEBD3B900D3A362 /* LaunchScreen.xib in Resources */,
 				4D7162F11AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf in Resources */,
@@ -391,6 +398,7 @@
 				4D7162CE1AEBF9EF00ED9B14 /* Item.swift in Sources */,
 				4D7162E71AEBFED700ED9B14 /* SwiftyJSON.swift in Sources */,
 				4DF307F61AEC4B2600B5B69B /* ConfirmItem.swift in Sources */,
+				4DF307FE1AEC677400B5B69B /* Searching.swift in Sources */,
 				4D7162C01AEBD59900ED9B14 /* Daddy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
