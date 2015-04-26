@@ -11,6 +11,8 @@ import Alamofire
 
 class SearchViewController: UIViewController {
 
+    var tap = UITapGestureRecognizer()
+
     var currentItem: Item?
     
     @IBOutlet weak var listeningLabel: UILabel!
@@ -37,11 +39,22 @@ class SearchViewController: UIViewController {
     @IBOutlet var pageViewController: UIPageViewController!
 
     var activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
+
+    var hud: MBProgressHUD?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        self.view.addGestureRecognizer(tap)
+        tap.cancelsTouchesInView = false
         setUpSubviewsAndShit()
     }
+    
+    func dismissKeyboard () {
+        searchField.resignFirstResponder()
+        self.view.endEditing(true)
+    }
+    
     
     func setUpSubviewsAndShit() {
         voiceRecorder.delegate = self
@@ -74,7 +87,6 @@ class SearchViewController: UIViewController {
         if voiceRecorder.isRecording {
             voiceRecorder.stop()
             micButton.setImage(UIImage(named: "micoff"), forState: .Normal)
-//            itemObjectRecieved("dsfs")
         } else {
             blackenView()
             voiceRecorder.record()
@@ -105,11 +117,16 @@ class SearchViewController: UIViewController {
 
 }
 
+
 extension SearchViewController: RecorderDelegate {
     func finished(file: NSURL) {
         dispatch_async(dispatch_get_main_queue(), {
-            self.activityIndicator.startAnimating()
+            self.listeningLabel!.alpha = 0
+            self.micButton!.alpha = 0
+           // self.activityIndicator.startAnimating()
         })
+        hud = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud?.labelText = "Working...."
         communicator.sendVoice(file)
         
     }
@@ -120,8 +137,8 @@ extension SearchViewController: CommunicatorDelegate {
         
         
         dispatch_async(dispatch_get_main_queue(), {
-            self.activityIndicator.stopAnimating()
-        
+            //self.activityIndicator.stopAnimating()
+            self.hud?.hidden = true
         
             let result = JSON(data: data)["obj"]
             println(result)
