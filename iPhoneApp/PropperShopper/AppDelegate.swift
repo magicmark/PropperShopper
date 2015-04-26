@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate {
 
     var window: UIWindow?
     var daddy: Daddy?
+    
+    var locationM: CLLocationManager?
+    var cords: CLLocation?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
+        self.location()
+        
         // Override point for customization after application launch.
         window = UIWindow(frame: UIScreen.mainScreen().bounds);
         daddy  = Daddy();
@@ -23,7 +30,52 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         return true
     }
+    
+    func location() {
+        self.locationM = CLLocationManager()
+        self.locationM!.delegate = self;
+        self.locationM!.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationM!.requestAlwaysAuthorization()
 
+        self.locationM!.startUpdatingLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager!, didFailWithError error: NSError!) {
+        println("Error while updating location" + error.localizedDescription)
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        
+        
+        self.cords = manager.location;
+        self.locationM?.stopUpdatingLocation()
+        
+//        CLGeocoder().reverseGeocodeLocation(
+//            manager.location,
+//            completionHandler: { (placemarks, NSError) -> Void in
+//                
+//            if placemarks.count > 0 {
+//                let pm = placemarks[0] as! CLPlacemark
+//                self.displayLocationInfo(pm)
+//
+//            }
+//        })
+        
+    }
+    
+    func displayLocationInfo(placemark: CLPlacemark?) {
+        if placemark != nil {
+            //stop updating location to save battery life
+            self.locationM?.stopUpdatingLocation()
+            println(placemark!.locality)
+            println(placemark!.postalCode)
+
+            println(placemark!.administrativeArea)
+            println(placemark!.country)
+        }
+    }
+    
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
