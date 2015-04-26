@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eMv-Bi-bed">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eMv-Bi-bed">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="NimbusSansNovusDOT-Lig.otf">
@@ -59,7 +59,7 @@
                                             <string key="text">We are still waiting for the results to come.
 please be patient!</string>
                                             <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Med" family="Nimbus Sans Novus D OT" pointSize="19"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shop-search-3x" translatesAutoresizingMaskIntoConstraints="NO" id="zM6-Aq-rOn">
@@ -171,7 +171,7 @@ please be patient!</string>
         <!--Shop Details-->
         <scene sceneID="7nh-Tl-glE">
             <objects>
-                <viewController title="Shop Details" id="ftn-9n-Big" sceneMemberID="viewController">
+                <viewController title="Shop Details" id="ftn-9n-Big" customClass="StoreDetailsViewController" customModule="PropperShopper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kjS-2O-QPZ"/>
                         <viewControllerLayoutGuide type="bottom" id="p7V-zt-uRf"/>
@@ -184,7 +184,7 @@ please be patient!</string>
                                 <rect key="frame" x="0.0" y="-33" width="414" height="656"/>
                                 <color key="tintColor" red="0.2196078431372549" green="0.36862745098039218" blue="0.031372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </mapView>
-                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4hI-PS-spV">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4hI-PS-spV">
                                 <rect key="frame" x="0.0" y="624" width="414" height="115"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQP-0z-r78">
@@ -245,6 +245,9 @@ please be patient!</string>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="map" destination="GNC-M0-iom" id="fII-OD-Sd3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTC-pE-pUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

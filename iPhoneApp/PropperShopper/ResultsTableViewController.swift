@@ -14,7 +14,7 @@ class ResultsTableViewController: UITableViewController, PTPusherDelegate {
     var channel: PTPusherChannel?
     var client: PTPusher?
     
-    var item: Item
+    var item: Item?
     
     @IBOutlet weak var preResults: UIView!
     
