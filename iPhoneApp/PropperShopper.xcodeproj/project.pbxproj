@@ -35,6 +35,7 @@
 		4DF307F71AEC4B2600B5B69B /* ConfirmItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */; };
 		4DF307FC1AEC676600B5B69B /* Searching.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DF307FB1AEC676600B5B69B /* Searching.xib */; };
 		4DF307FE1AEC677400B5B69B /* Searching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF307FD1AEC677400B5B69B /* Searching.swift */; };
+		98782A5688C645B3BB957920 /* libPods-PropperShopper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9B802F74DF45DD50B65296 /* libPods-PropperShopper.a */; };
 		C5727E801AEC6B2300E64926 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5727E7F1AEC6B2300E64926 /* ResultsTableViewController.swift */; };
 		C5727E821AEC74CC00E64926 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5727E811AEC74CC00E64926 /* MapKit.framework */; };
 		C5A391271AEC3BF300B1DE6E /* StoryboardBro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A391261AEC3BF300B1DE6E /* StoryboardBro.storyboard */; };
@@ -93,6 +94,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		48B2A826303159DAA7F9B135 /* Pods-PropperShopper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PropperShopper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PropperShopper/Pods-PropperShopper.debug.xcconfig"; sourceTree = "<group>"; };
 		4D067D921AEC712A006A2E22 /* onboard1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onboard1.swift; sourceTree = "<group>"; };
 		4D067D931AEC712A006A2E22 /* onboard1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = onboard1.xib; sourceTree = "<group>"; };
 		4D067D961AEC7168006A2E22 /* onboard2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = onboard2.swift; sourceTree = "<group>"; };
@@ -125,9 +127,12 @@
 		4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmItem.xib; sourceTree = "<group>"; };
 		4DF307FB1AEC676600B5B69B /* Searching.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Searching.xib; sourceTree = "<group>"; };
 		4DF307FD1AEC677400B5B69B /* Searching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Searching.swift; path = ../Searching.swift; sourceTree = "<group>"; };
+		4DFD6E831AECAA6600822744 /* PropperShopper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PropperShopper-Bridging-Header.h"; sourceTree = "<group>"; };
+		6677D0FF8E03AD725DFCA483 /* Pods-PropperShopper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PropperShopper.release.xcconfig"; path = "Pods/Target Support Files/Pods-PropperShopper/Pods-PropperShopper.release.xcconfig"; sourceTree = "<group>"; };
 		C5727E7F1AEC6B2300E64926 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		C5727E811AEC74CC00E64926 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C5A391261AEC3BF300B1DE6E /* StoryboardBro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardBro.storyboard; path = ../StoryboardBro.storyboard; sourceTree = "<group>"; };
+		EA9B802F74DF45DD50B65296 /* libPods-PropperShopper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PropperShopper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C5727E821AEC74CC00E64926 /* MapKit.framework in Frameworks */,
+				98782A5688C645B3BB957920 /* libPods-PropperShopper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,6 +188,8 @@
 				4D5C871C1AEBD3B900D3A362 /* PropperShopper */,
 				4D5C87321AEBD3B900D3A362 /* PropperShopperTests */,
 				4D5C871B1AEBD3B900D3A362 /* Products */,
+				78C8C275D910095B922F5256 /* Pods */,
+				6EB87F556B6993A3FBDFCAEC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -240,6 +248,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		6EB87F556B6993A3FBDFCAEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA9B802F74DF45DD50B65296 /* libPods-PropperShopper.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78C8C275D910095B922F5256 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				48B2A826303159DAA7F9B135 /* Pods-PropperShopper.debug.xcconfig */,
+				6677D0FF8E03AD725DFCA483 /* Pods-PropperShopper.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C5727E7E1AEC668600E64926 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +286,7 @@
 				C5727E7F1AEC6B2300E64926 /* ResultsTableViewController.swift */,
 				4D7162E61AEBFED700ED9B14 /* SwiftyJSON.swift */,
 				4D5C87211AEBD3B900D3A362 /* ViewController.swift */,
+				4DFD6E831AECAA6600822744 /* PropperShopper-Bridging-Header.h */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -288,10 +314,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D5C87391AEBD3B900D3A362 /* Build configuration list for PBXNativeTarget "PropperShopper" */;
 			buildPhases = (
+				B670C54AC251B5EA5F58EE31 /* Check Pods Manifest.lock */,
 				4D5C87161AEBD3B900D3A362 /* Sources */,
 				4D5C87171AEBD3B900D3A362 /* Frameworks */,
 				4D5C87181AEBD3B900D3A362 /* Resources */,
 				4D7162E41AEBFE1400ED9B14 /* Copy Frameworks */,
+				1AD7CAC0860BAA6235FB62A7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -423,6 +451,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1AD7CAC0860BAA6235FB62A7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PropperShopper/Pods-PropperShopper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B670C54AC251B5EA5F58EE31 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4D5C87161AEBD3B900D3A362 /* Sources */ = {
@@ -562,24 +623,31 @@
 		};
 		4D5C873A1AEBD3B900D3A362 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48B2A826303159DAA7F9B135 /* Pods-PropperShopper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PropperShopper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PropperShopper/PropperShopper-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		4D5C873B1AEBD3B900D3A362 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6677D0FF8E03AD725DFCA483 /* Pods-PropperShopper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = PropperShopper/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PropperShopper/PropperShopper-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
