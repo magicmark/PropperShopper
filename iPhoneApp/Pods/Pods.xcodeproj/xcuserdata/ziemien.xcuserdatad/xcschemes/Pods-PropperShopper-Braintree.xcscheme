@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F90337556DD0444D1475C5E3"
+               BlueprintIdentifier = "21EC21CB3E83422DA3F3FBEA"
                BuildableName = "libPods-PropperShopper-Braintree.a"
                BlueprintName = "Pods-PropperShopper-Braintree"
                ReferencedContainer = "container:Pods.xcodeproj">

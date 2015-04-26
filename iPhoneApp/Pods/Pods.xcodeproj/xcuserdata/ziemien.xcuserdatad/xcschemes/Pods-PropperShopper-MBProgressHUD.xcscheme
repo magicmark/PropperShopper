@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "810806EBBEACA1D08FFA5308"
-               BuildableName = "libPods-PropperShopper.a"
-               BlueprintName = "Pods-PropperShopper"
+               BlueprintIdentifier = "922DC0959C77CC9A03D88CD9"
+               BuildableName = "libPods-PropperShopper-MBProgressHUD.a"
+               BlueprintName = "Pods-PropperShopper-MBProgressHUD"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-PropperShopper-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PropperShopper-SocketRocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,37 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>09C841DCAE16CCE8432222DB</key>
+		<key>115049C423183C128EBAAE59</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E151BC0687C4C5679C05CD1</key>
+		<key>11C34F5D9DDA2E1F8BD78D22</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3D3ECA8D7CC2AAF85022B154</key>
+		<key>20F59B2F5C88A4CAE34B5CA6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>60E566F8B0D529CEBAA57240</key>
+		<key>21EC21CB3E83422DA3F3FBEA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7937111F9DB89614C8A1BB64</key>
+		<key>5B41894E105E9322C244E746</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7F876C54133AE4D98C18AC3</key>
+		<key>922DC0959C77CC9A03D88CD9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F90337556DD0444D1475C5E3</key>
+		<key>9869DB83509201D312E75581</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EE6E1B981D2106FC4BFAEF81</key>
 		<dict>
 			<key>primary</key>
 			<true/>
