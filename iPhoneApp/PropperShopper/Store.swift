@@ -11,6 +11,7 @@ import MapKit
 
 class Store: NSObject, MKAnnotation {
     let name: String
+    let title: String
     let address: String
     let coordinate: CLLocationCoordinate2D
     
@@ -20,6 +21,7 @@ class Store: NSObject, MKAnnotation {
         coordinate: CLLocationCoordinate2D
     ) {
         
+        self.title = name
         self.name = name
         self.address = address
         self.coordinate = coordinate

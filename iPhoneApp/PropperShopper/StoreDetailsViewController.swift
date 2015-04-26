@@ -20,6 +20,8 @@ class StoreDetailsViewController: UIViewController {
         super.viewDidLoad()
         
         
+        self.map.delegate = self
+        
         let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
         
         
@@ -33,7 +35,7 @@ class StoreDetailsViewController: UIViewController {
         
         centerMapOnLocation(initialLocation)
         
-        self.map.delegate = self
+
         
         // Do any additional setup after loading the view.
     }
