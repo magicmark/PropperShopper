@@ -25,6 +25,10 @@
 		4D7162F31AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7162F01AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf */; };
 		C5A391271AEC3BF300B1DE6E /* StoryboardBro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A391261AEC3BF300B1DE6E /* StoryboardBro.storyboard */; };
 		C5A3912D1AEC3E6500B1DE6E /* Alamofire.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 4D7162DB1AEBFDCA00ED9B14 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4DF307F61AEC4B2600B5B69B /* ConfirmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF307F41AEC4B2600B5B69B /* ConfirmItem.swift */; };
+		4DF307F71AEC4B2600B5B69B /* ConfirmItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */; };
+		C5A391271AEC3BF300B1DE6E /* StoryboardBro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A391261AEC3BF300B1DE6E /* StoryboardBro.storyboard */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +112,8 @@
 		4D7162EE1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-Lig.otf"; sourceTree = "<group>"; };
 		4D7162EF1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Med.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-Med.otf"; sourceTree = "<group>"; };
 		4D7162F01AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-Reg.otf"; sourceTree = "<group>"; };
+		4DF307F41AEC4B2600B5B69B /* ConfirmItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmItem.swift; sourceTree = "<group>"; };
+		4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmItem.xib; sourceTree = "<group>"; };
 		C5A391261AEC3BF300B1DE6E /* StoryboardBro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardBro.storyboard; path = ../StoryboardBro.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -160,6 +166,8 @@
 				4D7162CB1AEBF9E800ED9B14 /* Communicator.swift */,
 				4D7162CD1AEBF9EF00ED9B14 /* Item.swift */,
 				4D7162C41AEBD63E00ED9B14 /* SearchViewController.xib */,
+				4DF307F41AEC4B2600B5B69B /* ConfirmItem.swift */,
+				4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */,
 				C5A391251AEC3BD100B1DE6E /* Model */,
 				C5A391241AEC3B5900B1DE6E /* View */,
 				C5A391201AEC3B3300B1DE6E /* Controller */,
@@ -352,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D7162ED1AEC3C9900ED9B14 /* NimbusSansNovusDOT-SemBol.otf in Resources */,
+				4DF307F71AEC4B2600B5B69B /* ConfirmItem.xib in Resources */,
 				4D7162F31AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf in Resources */,
 				4D5C872A1AEBD3B900D3A362 /* LaunchScreen.xib in Resources */,
 				4D7162F11AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf in Resources */,
@@ -383,6 +392,7 @@
 				4D7162C51AEBD63E00ED9B14 /* SearchViewController.swift in Sources */,
 				4D7162CE1AEBF9EF00ED9B14 /* Item.swift in Sources */,
 				4D7162E71AEBFED700ED9B14 /* SwiftyJSON.swift in Sources */,
+				4DF307F61AEC4B2600B5B69B /* ConfirmItem.swift in Sources */,
 				4D7162C01AEBD59900ED9B14 /* Daddy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
