@@ -28,8 +28,9 @@ class StoreDetailsViewController: UIViewController {
         let artwork = Store(
             name: "Penis Town",
             address: "Waikiki Gateway Park",
-
-            coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661))
+            coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661),
+            price: "5000"
+        )
         
         map.addAnnotation(artwork)
         
