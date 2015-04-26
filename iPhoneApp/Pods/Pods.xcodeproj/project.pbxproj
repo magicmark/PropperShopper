@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02F15737D77426431B9C3ABC /* PTPusherEventDispatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 536227E27C0D648C56CEFCF4 /* PTPusherEventDispatcher.m */; };
+		109515AC9130F8FC5C315398 /* PTPusherAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 525CADFF894F669ED9011EC7 /* PTPusherAPI.h */; };
+		16D9E0096B542C4350BF20A2 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = F192B7DDECEA203128AB4EA0 /* SRWebSocket.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		17FBBEC6866DEED2E7A055C6 /* PTPusher+Testing.h in Headers */ = {isa = PBXBuildFile; fileRef = 33997669702BD7F0B926B0E0 /* PTPusher+Testing.h */; };
+		1EB87BFA786765A9E52EC1BE /* PTPusherEventDispatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = C59476491CF5F80D396B1F8B /* PTPusherEventDispatcher.h */; };
+		328FC1266F239FA85BF3A62B /* PTPusherMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CBBC4AEFCF5CAF6E6061126 /* PTPusherMacros.h */; };
+		39A14F9890B076A0135701C4 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 5BACAE95CE0BE3156B0A3360 /* base64.c */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		4109981B9767EF0BFAE91127 /* NSData+SRB64Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 717119979F9503C604B5DE0F /* NSData+SRB64Additions.h */; };
+		52B4FF05AA72A4CFDA1509F6 /* PTTargetActionEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = D181AF95EC9B5BB55311B0E0 /* PTTargetActionEventListener.h */; };
+		5B25068757415842B1D4FCD2 /* PTURLRequestOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 108CD256B16F2670709B70A3 /* PTURLRequestOperation.h */; };
+		5CBCD25D7664227F2224BFBC /* NSDictionary+QueryString.h in Headers */ = {isa = PBXBuildFile; fileRef = 6D71290FCDFA5EC90AF68F7C /* NSDictionary+QueryString.h */; };
+		5CC4C77448F864C06AD582B7 /* SRWebSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 9288A7E93F36D1C1FE7E8FC9 /* SRWebSocket.h */; };
+		5EFCD2BCDACA2F9EEC5C2BE8 /* PTPusherEventPublisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 19452163B5F1F7CDBE3F7121 /* PTPusherEventPublisher.h */; };
+		60B5281E1260102A1D6B40D4 /* NSString+Hashing.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ADAD13321AD97AC550970F7 /* NSString+Hashing.m */; };
+		63EC96AB18FC43F6299230D8 /* Pods-PropperShopper-SocketRocket-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A02EF241C7DA63CDC621EDE5 /* Pods-PropperShopper-SocketRocket-dummy.m */; };
+		66598E717850AC5947A12A63 /* PTPusher.h in Headers */ = {isa = PBXBuildFile; fileRef = 726AE31BFC15B084215CD8E0 /* PTPusher.h */; };
+		6DF3599CBC6B7C70A1CC74D9 /* PTPusherConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = C64F72D59042122A20F0A178 /* PTPusherConnection.m */; };
+		747CAAEC63B061EFC3F58491 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE253D2D496A7BA2D670CDD4 /* CFNetwork.framework */; };
+		75C3BAC2E00EEED3B6213007 /* PTPusher.m in Sources */ = {isa = PBXBuildFile; fileRef = B993618CF8009DC326E05F5D /* PTPusher.m */; };
+		7653321DE1D76DD847E83F3B /* PTPusherChannelAuthorizationOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 21AA659014F2CDA40EC049B3 /* PTPusherChannelAuthorizationOperation.m */; };
+		76A29250F9DEEEB24374D6F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4084C64F02925D0E017583 /* Foundation.framework */; };
+		7C22CD2DEC4646DF4895E023 /* PTPusherMockConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 55613949B64286CA9C16C22C /* PTPusherMockConnection.m */; };
+		7C31A062116EAA1FF4AF415B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4084C64F02925D0E017583 /* Foundation.framework */; };
+		8454C7315C9F9A4DCA80671B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4084C64F02925D0E017583 /* Foundation.framework */; };
+		8B1F5AF5C5760476AE01A6FE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9612F9537106C76B39FC8F9 /* Security.framework */; };
+		926B5EF33AF800F1AC6F68CD /* PTPusher+Testing.m in Sources */ = {isa = PBXBuildFile; fileRef = 5290EBA9EA4953DDF3B5BCDF /* PTPusher+Testing.m */; };
+		9465BE51FD561AF6A4C80610 /* Pods-PropperShopper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F845A4A5CCBFE27D9617F50 /* Pods-PropperShopper-dummy.m */; };
+		954DED16DB101C12645E4C97 /* PTPusherChannelAuthorizationOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = ECA92937AC42A199C92023A4 /* PTPusherChannelAuthorizationOperation.h */; };
+		99732A1E9B20FC7EFAF462BF /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = BB53D604E97A437366C29F17 /* base64.h */; };
+		A9668B9299206D6C576B3C21 /* PTPusherChannel.h in Headers */ = {isa = PBXBuildFile; fileRef = A784F3AB28A4AC86A26B87ED /* PTPusherChannel.h */; };
+		A9B40ED7574FD2C2D673A3CC /* PTBlockEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 406C7B768110D7E2A97D1349 /* PTBlockEventListener.h */; };
+		AA138CDD980F9C63CE22FF79 /* PTPusherEvent.h in Headers */ = {isa = PBXBuildFile; fileRef = E71153A9A0A83D5668488906 /* PTPusherEvent.h */; };
+		B1621C2423E96CEE35F92B42 /* PTPusherAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 771F900D225A9E796FAE6B13 /* PTPusherAPI.m */; };
+		B6B50E2E35883C4760C36D81 /* PTPusherPresenceChannelDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = AF91E85454D8C50FA58A36B6 /* PTPusherPresenceChannelDelegate.h */; };
+		B707EEEF5A6B218440ECA1BC /* PTTargetActionEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = F181323B16F7D4F8528CC4E2 /* PTTargetActionEventListener.m */; };
+		C06F2DF58D17CF4EF4AF675C /* Pods-PropperShopper-libPusher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7270CBC3320CACC61533CC3 /* Pods-PropperShopper-libPusher-dummy.m */; };
+		C0AD43DF8482A67E5409E2F2 /* PTBlockEventListener.m in Sources */ = {isa = PBXBuildFile; fileRef = A32ADF5F8EF47095FF17A271 /* PTBlockEventListener.m */; };
+		C4C4CD2B24A30EF1F60B3B78 /* NSDictionary+QueryString.m in Sources */ = {isa = PBXBuildFile; fileRef = 16A4D9F6322691FC2838B747 /* NSDictionary+QueryString.m */; };
+		CD7B330056986B8128422968 /* PTPusherMockConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C9CF286989BA9381D6BCCC6 /* PTPusherMockConnection.h */; };
+		CF61CB539C78466CB70ED6D3 /* NSString+Hashing.h in Headers */ = {isa = PBXBuildFile; fileRef = D51D6A68E6CFD01E37FE68D3 /* NSString+Hashing.h */; };
+		D6345D0E99801E99987056E3 /* PTJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C2A1C2DC62420FB33457F40 /* PTJSON.m */; };
+		E47C05A3B772FDB2676562BA /* PTPusherEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDCB91F38DF3EF2331B6E15 /* PTPusherEvent.m */; };
+		E4D48CDD992EDCCA6A635FF4 /* PTPusherChannel_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = A251C240E8DB5435B23BF0A9 /* PTPusherChannel_Private.h */; };
+		E5F0817B1E49F37E24A66D3C /* PTPusherErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A418DB2093CD36C893AB154 /* PTPusherErrors.h */; };
+		E8A38F5C5BF58366D351FD14 /* PTEventListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D03EE0D5B959D996E796470 /* PTEventListener.h */; };
+		EBF5214358CCFAA8977082AF /* PTURLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 99415027F3711BF0C72D9D7D /* PTURLRequestOperation.m */; };
+		EF6B5415A6C1E4282663E2A7 /* PTPusherChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA4A6D30AE4AF97E053E2A9 /* PTPusherChannel.m */; };
+		F06CE7D03F35D17541AD8A58 /* PTJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = CC50C43CBB5C373235EDD0B9 /* PTJSON.h */; };
+		F57B11C91E3D942B635F006D /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = D9AF55CEC57B2344361548FF /* NSData+SRB64Additions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F9C310552D8390B96D38465B /* PTPusherDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = F84DE3D2942DDE5A955D82E8 /* PTPusherDelegate.h */; };
+		FA91B3BCC69F356C4FD947F0 /* Pusher.h in Headers */ = {isa = PBXBuildFile; fileRef = C3116F37010E05B1955B5152 /* Pusher.h */; };
+		FF57EAD2C8AAB30B0F8EF169 /* PTPusherConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 83A0CC57E5A5E0CB43CF5358 /* PTPusherConnection.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		362DC53D1F437EA92DF5A8A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 982797BA390B70317F8B65C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E96C44BB70E65ECF3D8A89DA;
+			remoteInfo = "Pods-PropperShopper-SocketRocket";
+		};
+		56C01126E51D3615C147EECA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 982797BA390B70317F8B65C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E96C44BB70E65ECF3D8A89DA;
+			remoteInfo = "Pods-PropperShopper-SocketRocket";
+		};
+		CF6FD8AAEC0F5ACA931DE5BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 982797BA390B70317F8B65C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38B544BEC33EC3CCFA5CF77D;
+			remoteInfo = "Pods-PropperShopper-libPusher";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0032D86A4C2DBD8D52FFE2EA /* libPods-PropperShopper-SocketRocket.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PropperShopper-SocketRocket.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		108CD256B16F2670709B70A3 /* PTURLRequestOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTURLRequestOperation.h; path = "Library/Private Headers/PTURLRequestOperation.h"; sourceTree = "<group>"; };
+		16A4D9F6322691FC2838B747 /* NSDictionary+QueryString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+QueryString.m"; path = "Library/NSDictionary+QueryString.m"; sourceTree = "<group>"; };
+		19452163B5F1F7CDBE3F7121 /* PTPusherEventPublisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusherEventPublisher.h; path = Library/PTPusherEventPublisher.h; sourceTree = "<group>"; };
+		1C91EA82926D3857E053BBEC /* Pods-PropperShopper-SocketRocket-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PropperShopper-SocketRocket-prefix.pch"; sourceTree = "<group>"; };
+		1C9CF286989BA9381D6BCCC6 /* PTPusherMockConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusherMockConnection.h; path = Library/PTPusherMockConnection.h; sourceTree = "<group>"; };
+		21AA659014F2CDA40EC049B3 /* PTPusherChannelAuthorizationOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTPusherChannelAuthorizationOperation.m; path = Library/PTPusherChannelAuthorizationOperation.m; sourceTree = "<group>"; };
+		2605FD85F94E696566BAC8CC /* Pods-PropperShopper-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PropperShopper-acknowledgements.plist"; sourceTree = "<group>"; };
+		33997669702BD7F0B926B0E0 /* PTPusher+Testing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PTPusher+Testing.h"; path = "Library/PTPusher+Testing.h"; sourceTree = "<group>"; };
+		3A418DB2093CD36C893AB154 /* PTPusherErrors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusherErrors.h; path = Library/PTPusherErrors.h; sourceTree = "<group>"; };
+		3E4084C64F02925D0E017583 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		406C7B768110D7E2A97D1349 /* PTBlockEventListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTBlockEventListener.h; path = "Library/Private Headers/PTBlockEventListener.h"; sourceTree = "<group>"; };
+		45FA0903B7718F31F40CE81C /* Pods-PropperShopper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PropperShopper.debug.xcconfig"; sourceTree = "<group>"; };
+		48DCC6B27982366F49948EC5 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		4C2A1C2DC62420FB33457F40 /* PTJSON.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTJSON.m; path = Library/PTJSON.m; sourceTree = "<group>"; };
+		4CBBC4AEFCF5CAF6E6061126 /* PTPusherMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusherMacros.h; path = Library/PTPusherMacros.h; sourceTree = "<group>"; };
+		4F845A4A5CCBFE27D9617F50 /* Pods-PropperShopper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PropperShopper-dummy.m"; sourceTree = "<group>"; };
+		50BB55B32F319449D7B47C21 /* Pods-PropperShopper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PropperShopper.release.xcconfig"; sourceTree = "<group>"; };
+		525CADFF894F669ED9011EC7 /* PTPusherAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusherAPI.h; path = Library/PTPusherAPI.h; sourceTree = "<group>"; };
+		5290EBA9EA4953DDF3B5BCDF /* PTPusher+Testing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PTPusher+Testing.m"; path = "Library/PTPusher+Testing.m"; sourceTree = "<group>"; };
+		536227E27C0D648C56CEFCF4 /* PTPusherEventDispatcher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTPusherEventDispatcher.m; path = Library/PTPusherEventDispatcher.m; sourceTree = "<group>"; };
+		55613949B64286CA9C16C22C /* PTPusherMockConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTPusherMockConnection.m; path = Library/PTPusherMockConnection.m; sourceTree = "<group>"; };
+		5BACAE95CE0BE3156B0A3360 /* base64.c */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.c; name = base64.c; path = SocketRocket/base64.c; sourceTree = "<group>"; };
+		61456C4399AF77525E3163AF /* libPods-PropperShopper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PropperShopper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A7299A5DEFA799F470B7CFB /* Pods-PropperShopper-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PropperShopper-resources.sh"; sourceTree = "<group>"; };
+		6C8C88E40073EC16E6A1466A /* Pods-PropperShopper-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PropperShopper-environment.h"; sourceTree = "<group>"; };
+		6D71290FCDFA5EC90AF68F7C /* NSDictionary+QueryString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+QueryString.h"; path = "Library/Private Headers/NSDictionary+QueryString.h"; sourceTree = "<group>"; };
+		717119979F9503C604B5DE0F /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+SRB64Additions.h"; path = "SocketRocket/NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		726AE31BFC15B084215CD8E0 /* PTPusher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusher.h; path = Library/PTPusher.h; sourceTree = "<group>"; };
+		771F900D225A9E796FAE6B13 /* PTPusherAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTPusherAPI.m; path = Library/PTPusherAPI.m; sourceTree = "<group>"; };
+		7ADAD13321AD97AC550970F7 /* NSString+Hashing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+Hashing.m"; path = "Library/NSString+Hashing.m"; sourceTree = "<group>"; };
+		7D03EE0D5B959D996E796470 /* PTEventListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTEventListener.h; path = Library/PTEventListener.h; sourceTree = "<group>"; };
+		83A0CC57E5A5E0CB43CF5358 /* PTPusherConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusherConnection.h; path = Library/PTPusherConnection.h; sourceTree = "<group>"; };
+		85AA81BAFA50B1A312AD96AC /* Pods-PropperShopper-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PropperShopper-acknowledgements.markdown"; sourceTree = "<group>"; };
+		85EB49A45D471B0E6D2E0183 /* Pods-PropperShopper-libPusher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PropperShopper-libPusher-prefix.pch"; sourceTree = "<group>"; };
+		869F338B12116E5637FF9F97 /* Pods-PropperShopper-SocketRocket-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PropperShopper-SocketRocket-Private.xcconfig"; sourceTree = "<group>"; };
+		90A98D243B3F03F2808176E7 /* Pods-PropperShopper-libPusher-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PropperShopper-libPusher-Private.xcconfig"; sourceTree = "<group>"; };
+		9288A7E93F36D1C1FE7E8FC9 /* SRWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRWebSocket.h; path = SocketRocket/SRWebSocket.h; sourceTree = "<group>"; };
+		99415027F3711BF0C72D9D7D /* PTURLRequestOperation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTURLRequestOperation.m; path = Library/PTURLRequestOperation.m; sourceTree = "<group>"; };
+		A02EF241C7DA63CDC621EDE5 /* Pods-PropperShopper-SocketRocket-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PropperShopper-SocketRocket-dummy.m"; sourceTree = "<group>"; };
+		A06C22E989E84C64563672DC /* Pods-PropperShopper-libPusher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PropperShopper-libPusher.xcconfig"; sourceTree = "<group>"; };
+		A251C240E8DB5435B23BF0A9 /* PTPusherChannel_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusherChannel_Private.h; path = "Library/Private Headers/PTPusherChannel_Private.h"; sourceTree = "<group>"; };
+		A32ADF5F8EF47095FF17A271 /* PTBlockEventListener.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTBlockEventListener.m; path = Library/PTBlockEventListener.m; sourceTree = "<group>"; };
+		A7270CBC3320CACC61533CC3 /* Pods-PropperShopper-libPusher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PropperShopper-libPusher-dummy.m"; sourceTree = "<group>"; };
+		A73921A2880D5D79B20C1AC1 /* libPods-PropperShopper-libPusher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PropperShopper-libPusher.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A784F3AB28A4AC86A26B87ED /* PTPusherChannel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusherChannel.h; path = Library/PTPusherChannel.h; sourceTree = "<group>"; };
+		ABA4A6D30AE4AF97E053E2A9 /* PTPusherChannel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTPusherChannel.m; path = Library/PTPusherChannel.m; sourceTree = "<group>"; };
+		ADDCB91F38DF3EF2331B6E15 /* PTPusherEvent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTPusherEvent.m; path = Library/PTPusherEvent.m; sourceTree = "<group>"; };
+		AEAAAA54C2E3FE34DA59736B /* Pods-PropperShopper-SocketRocket.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PropperShopper-SocketRocket.xcconfig"; sourceTree = "<group>"; };
+		AF91E85454D8C50FA58A36B6 /* PTPusherPresenceChannelDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusherPresenceChannelDelegate.h; path = Library/PTPusherPresenceChannelDelegate.h; sourceTree = "<group>"; };
+		B993618CF8009DC326E05F5D /* PTPusher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTPusher.m; path = Library/PTPusher.m; sourceTree = "<group>"; };
+		BB53D604E97A437366C29F17 /* base64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = base64.h; path = SocketRocket/base64.h; sourceTree = "<group>"; };
+		BE253D2D496A7BA2D670CDD4 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		C3116F37010E05B1955B5152 /* Pusher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Pusher.h; path = Library/Pusher.h; sourceTree = "<group>"; };
+		C59476491CF5F80D396B1F8B /* PTPusherEventDispatcher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusherEventDispatcher.h; path = Library/PTPusherEventDispatcher.h; sourceTree = "<group>"; };
+		C64F72D59042122A20F0A178 /* PTPusherConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTPusherConnection.m; path = Library/PTPusherConnection.m; sourceTree = "<group>"; };
+		C9612F9537106C76B39FC8F9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		CC50C43CBB5C373235EDD0B9 /* PTJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTJSON.h; path = "Library/Private Headers/PTJSON.h"; sourceTree = "<group>"; };
+		D181AF95EC9B5BB55311B0E0 /* PTTargetActionEventListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTTargetActionEventListener.h; path = "Library/Private Headers/PTTargetActionEventListener.h"; sourceTree = "<group>"; };
+		D51D6A68E6CFD01E37FE68D3 /* NSString+Hashing.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Hashing.h"; path = "Library/Private Headers/NSString+Hashing.h"; sourceTree = "<group>"; };
+		D9AF55CEC57B2344361548FF /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+SRB64Additions.m"; path = "SocketRocket/NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		E71153A9A0A83D5668488906 /* PTPusherEvent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusherEvent.h; path = Library/PTPusherEvent.h; sourceTree = "<group>"; };
+		ECA92937AC42A199C92023A4 /* PTPusherChannelAuthorizationOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusherChannelAuthorizationOperation.h; path = "Library/Private Headers/PTPusherChannelAuthorizationOperation.h"; sourceTree = "<group>"; };
+		F181323B16F7D4F8528CC4E2 /* PTTargetActionEventListener.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PTTargetActionEventListener.m; path = Library/PTTargetActionEventListener.m; sourceTree = "<group>"; };
+		F192B7DDECEA203128AB4EA0 /* SRWebSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRWebSocket.m; path = SocketRocket/SRWebSocket.m; sourceTree = "<group>"; };
+		F84DE3D2942DDE5A955D82E8 /* PTPusherDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PTPusherDelegate.h; path = Library/PTPusherDelegate.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		99A6985DC250B8E097084744 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				747CAAEC63B061EFC3F58491 /* CFNetwork.framework in Frameworks */,
+				8454C7315C9F9A4DCA80671B /* Foundation.framework in Frameworks */,
+				8B1F5AF5C5760476AE01A6FE /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC39A08ED81CF51A758B0C01 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C31A062116EAA1FF4AF415B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2FFAB8D44CE5E5522ED2E8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76A29250F9DEEEB24374D6F4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		001386B1D8BFE75546196435 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AEAAAA54C2E3FE34DA59736B /* Pods-PropperShopper-SocketRocket.xcconfig */,
+				869F338B12116E5637FF9F97 /* Pods-PropperShopper-SocketRocket-Private.xcconfig */,
+				A02EF241C7DA63CDC621EDE5 /* Pods-PropperShopper-SocketRocket-dummy.m */,
+				1C91EA82926D3857E053BBEC /* Pods-PropperShopper-SocketRocket-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-PropperShopper-SocketRocket";
+			sourceTree = "<group>";
+		};
+		1FCC1E49A97A69BC78A5773C /* libPusher */ = {
+			isa = PBXGroup;
+			children = (
+				4CC9D04C67785CC89538FB13 /* Core */,
+				6A843B07AE2AA1992EC8859B /* Support Files */,
+			);
+			path = libPusher;
+			sourceTree = "<group>";
+		};
+		333DF0C61806208FBB5C8ED1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61456C4399AF77525E3163AF /* libPods-PropperShopper.a */,
+				0032D86A4C2DBD8D52FFE2EA /* libPods-PropperShopper-SocketRocket.a */,
+				A73921A2880D5D79B20C1AC1 /* libPods-PropperShopper-libPusher.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CC9D04C67785CC89538FB13 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				6D71290FCDFA5EC90AF68F7C /* NSDictionary+QueryString.h */,
+				16A4D9F6322691FC2838B747 /* NSDictionary+QueryString.m */,
+				D51D6A68E6CFD01E37FE68D3 /* NSString+Hashing.h */,
+				7ADAD13321AD97AC550970F7 /* NSString+Hashing.m */,
+				406C7B768110D7E2A97D1349 /* PTBlockEventListener.h */,
+				A32ADF5F8EF47095FF17A271 /* PTBlockEventListener.m */,
+				7D03EE0D5B959D996E796470 /* PTEventListener.h */,
+				CC50C43CBB5C373235EDD0B9 /* PTJSON.h */,
+				4C2A1C2DC62420FB33457F40 /* PTJSON.m */,
+				726AE31BFC15B084215CD8E0 /* PTPusher.h */,
+				B993618CF8009DC326E05F5D /* PTPusher.m */,
+				33997669702BD7F0B926B0E0 /* PTPusher+Testing.h */,
+				5290EBA9EA4953DDF3B5BCDF /* PTPusher+Testing.m */,
+				525CADFF894F669ED9011EC7 /* PTPusherAPI.h */,
+				771F900D225A9E796FAE6B13 /* PTPusherAPI.m */,
+				A784F3AB28A4AC86A26B87ED /* PTPusherChannel.h */,
+				ABA4A6D30AE4AF97E053E2A9 /* PTPusherChannel.m */,
+				ECA92937AC42A199C92023A4 /* PTPusherChannelAuthorizationOperation.h */,
+				21AA659014F2CDA40EC049B3 /* PTPusherChannelAuthorizationOperation.m */,
+				A251C240E8DB5435B23BF0A9 /* PTPusherChannel_Private.h */,
+				83A0CC57E5A5E0CB43CF5358 /* PTPusherConnection.h */,
+				C64F72D59042122A20F0A178 /* PTPusherConnection.m */,
+				F84DE3D2942DDE5A955D82E8 /* PTPusherDelegate.h */,
+				3A418DB2093CD36C893AB154 /* PTPusherErrors.h */,
+				E71153A9A0A83D5668488906 /* PTPusherEvent.h */,
+				ADDCB91F38DF3EF2331B6E15 /* PTPusherEvent.m */,
+				C59476491CF5F80D396B1F8B /* PTPusherEventDispatcher.h */,
+				536227E27C0D648C56CEFCF4 /* PTPusherEventDispatcher.m */,
+				19452163B5F1F7CDBE3F7121 /* PTPusherEventPublisher.h */,
+				4CBBC4AEFCF5CAF6E6061126 /* PTPusherMacros.h */,
+				1C9CF286989BA9381D6BCCC6 /* PTPusherMockConnection.h */,
+				55613949B64286CA9C16C22C /* PTPusherMockConnection.m */,
+				AF91E85454D8C50FA58A36B6 /* PTPusherPresenceChannelDelegate.h */,
+				D181AF95EC9B5BB55311B0E0 /* PTTargetActionEventListener.h */,
+				F181323B16F7D4F8528CC4E2 /* PTTargetActionEventListener.m */,
+				108CD256B16F2670709B70A3 /* PTURLRequestOperation.h */,
+				99415027F3711BF0C72D9D7D /* PTURLRequestOperation.m */,
+				C3116F37010E05B1955B5152 /* Pusher.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		604A9D6E741117FB01D1FCDA /* Pods-PropperShopper */ = {
+			isa = PBXGroup;
+			children = (
+				85AA81BAFA50B1A312AD96AC /* Pods-PropperShopper-acknowledgements.markdown */,
+				2605FD85F94E696566BAC8CC /* Pods-PropperShopper-acknowledgements.plist */,
+				4F845A4A5CCBFE27D9617F50 /* Pods-PropperShopper-dummy.m */,
+				6C8C88E40073EC16E6A1466A /* Pods-PropperShopper-environment.h */,
+				6A7299A5DEFA799F470B7CFB /* Pods-PropperShopper-resources.sh */,
+				45FA0903B7718F31F40CE81C /* Pods-PropperShopper.debug.xcconfig */,
+				50BB55B32F319449D7B47C21 /* Pods-PropperShopper.release.xcconfig */,
+			);
+			name = "Pods-PropperShopper";
+			path = "Target Support Files/Pods-PropperShopper";
+			sourceTree = "<group>";
+		};
+		64633CDDB63BAE405758C026 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BE253D2D496A7BA2D670CDD4 /* CFNetwork.framework */,
+				3E4084C64F02925D0E017583 /* Foundation.framework */,
+				C9612F9537106C76B39FC8F9 /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		65DBD560204BBCE120637F08 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64633CDDB63BAE405758C026 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A843B07AE2AA1992EC8859B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A06C22E989E84C64563672DC /* Pods-PropperShopper-libPusher.xcconfig */,
+				90A98D243B3F03F2808176E7 /* Pods-PropperShopper-libPusher-Private.xcconfig */,
+				A7270CBC3320CACC61533CC3 /* Pods-PropperShopper-libPusher-dummy.m */,
+				85EB49A45D471B0E6D2E0183 /* Pods-PropperShopper-libPusher-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-PropperShopper-libPusher";
+			sourceTree = "<group>";
+		};
+		9DC7F3071AFA94776E277474 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				717119979F9503C604B5DE0F /* NSData+SRB64Additions.h */,
+				D9AF55CEC57B2344361548FF /* NSData+SRB64Additions.m */,
+				9288A7E93F36D1C1FE7E8FC9 /* SRWebSocket.h */,
+				F192B7DDECEA203128AB4EA0 /* SRWebSocket.m */,
+				5BACAE95CE0BE3156B0A3360 /* base64.c */,
+				BB53D604E97A437366C29F17 /* base64.h */,
+				001386B1D8BFE75546196435 /* Support Files */,
+			);
+			path = SocketRocket;
+			sourceTree = "<group>";
+		};
+		BE94986A659A36516356A054 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				604A9D6E741117FB01D1FCDA /* Pods-PropperShopper */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C89F6801410EF9B2455191D2 = {
+			isa = PBXGroup;
+			children = (
+				48DCC6B27982366F49948EC5 /* Podfile */,
+				65DBD560204BBCE120637F08 /* Frameworks */,
+				DC9F6BA77F99F2DED37032A6 /* Pods */,
+				333DF0C61806208FBB5C8ED1 /* Products */,
+				BE94986A659A36516356A054 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DC9F6BA77F99F2DED37032A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9DC7F3071AFA94776E277474 /* SocketRocket */,
+				1FCC1E49A97A69BC78A5773C /* libPusher */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		83ABC2326663CC8EF8B3C9D6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4109981B9767EF0BFAE91127 /* NSData+SRB64Additions.h in Headers */,
+				5CC4C77448F864C06AD582B7 /* SRWebSocket.h in Headers */,
+				99732A1E9B20FC7EFAF462BF /* base64.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2F49A245F63E84EAD9967EA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CBCD25D7664227F2224BFBC /* NSDictionary+QueryString.h in Headers */,
+				CF61CB539C78466CB70ED6D3 /* NSString+Hashing.h in Headers */,
+				A9B40ED7574FD2C2D673A3CC /* PTBlockEventListener.h in Headers */,
+				E8A38F5C5BF58366D351FD14 /* PTEventListener.h in Headers */,
+				F06CE7D03F35D17541AD8A58 /* PTJSON.h in Headers */,
+				17FBBEC6866DEED2E7A055C6 /* PTPusher+Testing.h in Headers */,
+				66598E717850AC5947A12A63 /* PTPusher.h in Headers */,
+				109515AC9130F8FC5C315398 /* PTPusherAPI.h in Headers */,
+				A9668B9299206D6C576B3C21 /* PTPusherChannel.h in Headers */,
+				954DED16DB101C12645E4C97 /* PTPusherChannelAuthorizationOperation.h in Headers */,
+				E4D48CDD992EDCCA6A635FF4 /* PTPusherChannel_Private.h in Headers */,
+				FF57EAD2C8AAB30B0F8EF169 /* PTPusherConnection.h in Headers */,
+				F9C310552D8390B96D38465B /* PTPusherDelegate.h in Headers */,
+				E5F0817B1E49F37E24A66D3C /* PTPusherErrors.h in Headers */,
+				AA138CDD980F9C63CE22FF79 /* PTPusherEvent.h in Headers */,
+				1EB87BFA786765A9E52EC1BE /* PTPusherEventDispatcher.h in Headers */,
+				5EFCD2BCDACA2F9EEC5C2BE8 /* PTPusherEventPublisher.h in Headers */,
+				328FC1266F239FA85BF3A62B /* PTPusherMacros.h in Headers */,
+				CD7B330056986B8128422968 /* PTPusherMockConnection.h in Headers */,
+				B6B50E2E35883C4760C36D81 /* PTPusherPresenceChannelDelegate.h in Headers */,
+				52B4FF05AA72A4CFDA1509F6 /* PTTargetActionEventListener.h in Headers */,
+				5B25068757415842B1D4FCD2 /* PTURLRequestOperation.h in Headers */,
+				FA91B3BCC69F356C4FD947F0 /* Pusher.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		38B544BEC33EC3CCFA5CF77D /* Pods-PropperShopper-libPusher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9FFB6A4BEEF6B3C3EB19D91F /* Build configuration list for PBXNativeTarget "Pods-PropperShopper-libPusher" */;
+			buildPhases = (
+				CC658EA8393E30886ADEA80E /* Sources */,
+				AC39A08ED81CF51A758B0C01 /* Frameworks */,
+				E2F49A245F63E84EAD9967EA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B83006E98D1B883FE7F73E02 /* PBXTargetDependency */,
+			);
+			name = "Pods-PropperShopper-libPusher";
+			productName = "Pods-PropperShopper-libPusher";
+			productReference = A73921A2880D5D79B20C1AC1 /* libPods-PropperShopper-libPusher.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		810806EBBEACA1D08FFA5308 /* Pods-PropperShopper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0686AB0B69CBA0A17AB422B /* Build configuration list for PBXNativeTarget "Pods-PropperShopper" */;
+			buildPhases = (
+				EF56387251425787223B13DE /* Sources */,
+				F2FFAB8D44CE5E5522ED2E8A /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B9F525409AAA001BDDE26AE /* PBXTargetDependency */,
+				C2DAB48BBC760A614C78E6BF /* PBXTargetDependency */,
+			);
+			name = "Pods-PropperShopper";
+			productName = "Pods-PropperShopper";
+			productReference = 61456C4399AF77525E3163AF /* libPods-PropperShopper.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E96C44BB70E65ECF3D8A89DA /* Pods-PropperShopper-SocketRocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E2F4EDC63FA40483E422E5AA /* Build configuration list for PBXNativeTarget "Pods-PropperShopper-SocketRocket" */;
+			buildPhases = (
+				EA0595324FA73DB8E22AABCE /* Sources */,
+				99A6985DC250B8E097084744 /* Frameworks */,
+				83ABC2326663CC8EF8B3C9D6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-PropperShopper-SocketRocket";
+			productName = "Pods-PropperShopper-SocketRocket";
+			productReference = 0032D86A4C2DBD8D52FFE2EA /* libPods-PropperShopper-SocketRocket.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		982797BA390B70317F8B65C9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+			};
+			buildConfigurationList = 83CA8F5F2E68980EB09F28C4 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C89F6801410EF9B2455191D2;
+			productRefGroup = 333DF0C61806208FBB5C8ED1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				810806EBBEACA1D08FFA5308 /* Pods-PropperShopper */,
+				E96C44BB70E65ECF3D8A89DA /* Pods-PropperShopper-SocketRocket */,
+				38B544BEC33EC3CCFA5CF77D /* Pods-PropperShopper-libPusher */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CC658EA8393E30886ADEA80E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4C4CD2B24A30EF1F60B3B78 /* NSDictionary+QueryString.m in Sources */,
+				60B5281E1260102A1D6B40D4 /* NSString+Hashing.m in Sources */,
+				C0AD43DF8482A67E5409E2F2 /* PTBlockEventListener.m in Sources */,
+				D6345D0E99801E99987056E3 /* PTJSON.m in Sources */,
+				926B5EF33AF800F1AC6F68CD /* PTPusher+Testing.m in Sources */,
+				75C3BAC2E00EEED3B6213007 /* PTPusher.m in Sources */,
+				B1621C2423E96CEE35F92B42 /* PTPusherAPI.m in Sources */,
+				EF6B5415A6C1E4282663E2A7 /* PTPusherChannel.m in Sources */,
+				7653321DE1D76DD847E83F3B /* PTPusherChannelAuthorizationOperation.m in Sources */,
+				6DF3599CBC6B7C70A1CC74D9 /* PTPusherConnection.m in Sources */,
+				E47C05A3B772FDB2676562BA /* PTPusherEvent.m in Sources */,
+				02F15737D77426431B9C3ABC /* PTPusherEventDispatcher.m in Sources */,
+				7C22CD2DEC4646DF4895E023 /* PTPusherMockConnection.m in Sources */,
+				B707EEEF5A6B218440ECA1BC /* PTTargetActionEventListener.m in Sources */,
+				EBF5214358CCFAA8977082AF /* PTURLRequestOperation.m in Sources */,
+				C06F2DF58D17CF4EF4AF675C /* Pods-PropperShopper-libPusher-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0595324FA73DB8E22AABCE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F57B11C91E3D942B635F006D /* NSData+SRB64Additions.m in Sources */,
+				63EC96AB18FC43F6299230D8 /* Pods-PropperShopper-SocketRocket-dummy.m in Sources */,
+				16D9E0096B542C4350BF20A2 /* SRWebSocket.m in Sources */,
+				39A14F9890B076A0135701C4 /* base64.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF56387251425787223B13DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9465BE51FD561AF6A4C80610 /* Pods-PropperShopper-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B9F525409AAA001BDDE26AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PropperShopper-SocketRocket";
+			target = E96C44BB70E65ECF3D8A89DA /* Pods-PropperShopper-SocketRocket */;
+			targetProxy = 362DC53D1F437EA92DF5A8A8 /* PBXContainerItemProxy */;
+		};
+		B83006E98D1B883FE7F73E02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PropperShopper-SocketRocket";
+			target = E96C44BB70E65ECF3D8A89DA /* Pods-PropperShopper-SocketRocket */;
+			targetProxy = 56C01126E51D3615C147EECA /* PBXContainerItemProxy */;
+		};
+		C2DAB48BBC760A614C78E6BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-PropperShopper-libPusher";
+			target = 38B544BEC33EC3CCFA5CF77D /* Pods-PropperShopper-libPusher */;
+			targetProxy = CF6FD8AAEC0F5ACA931DE5BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0F69A39006F4234783C63464 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 869F338B12116E5637FF9F97 /* Pods-PropperShopper-SocketRocket-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PropperShopper-SocketRocket/Pods-PropperShopper-SocketRocket-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		14356E9EE915C68B59ABC08D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C8AEDA4B2187F02F291F9CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 45FA0903B7718F31F40CE81C /* Pods-PropperShopper.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		54E96E56DF74036095D28EE2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90A98D243B3F03F2808176E7 /* Pods-PropperShopper-libPusher-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PropperShopper-libPusher/Pods-PropperShopper-libPusher-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7AD29B6407DAC47942BA01E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90A98D243B3F03F2808176E7 /* Pods-PropperShopper-libPusher-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PropperShopper-libPusher/Pods-PropperShopper-libPusher-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A30D42A3FC925BCAFAAA1794 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		ED8DAF6FFCC3CBEA12936BF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 869F338B12116E5637FF9F97 /* Pods-PropperShopper-SocketRocket-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-PropperShopper-SocketRocket/Pods-PropperShopper-SocketRocket-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F30F46780420CC723BDA1CE2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50BB55B32F319449D7B47C21 /* Pods-PropperShopper.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83CA8F5F2E68980EB09F28C4 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30D42A3FC925BCAFAAA1794 /* Debug */,
+				14356E9EE915C68B59ABC08D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9FFB6A4BEEF6B3C3EB19D91F /* Build configuration list for PBXNativeTarget "Pods-PropperShopper-libPusher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54E96E56DF74036095D28EE2 /* Debug */,
+				7AD29B6407DAC47942BA01E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0686AB0B69CBA0A17AB422B /* Build configuration list for PBXNativeTarget "Pods-PropperShopper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C8AEDA4B2187F02F291F9CF /* Debug */,
+				F30F46780420CC723BDA1CE2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2F4EDC63FA40483E422E5AA /* Build configuration list for PBXNativeTarget "Pods-PropperShopper-SocketRocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F69A39006F4234783C63464 /* Debug */,
+				ED8DAF6FFCC3CBEA12936BF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 982797BA390B70317F8B65C9 /* Project object */;
+}

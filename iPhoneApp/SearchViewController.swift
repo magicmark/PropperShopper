@@ -146,6 +146,7 @@ extension SearchViewController: CommunicatorDelegate {
 
 extension SearchViewController: ConfirmItemDelegate {
     func itemConfirmed() {
+        communicator.startSearch(currentItem!, coords: "51.5083,0.0594")
         UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             
             self.confirmItem.view.frame = CGRectMake(0-UIScreen.mainScreen().bounds.width, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
@@ -160,7 +161,6 @@ extension SearchViewController: ConfirmItemDelegate {
 
 extension SearchViewController: SearchingDelegate {
     func searchDone () {
-        communicator.startSearch(currentItem!)
         let sb = UIStoryboard(name: "StoryboardBro", bundle: nil)
         let searchVC = sb.instantiateInitialViewController() as! UIViewController
         self.view.window?.rootViewController = searchVC;

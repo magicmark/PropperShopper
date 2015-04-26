@@ -8,8 +8,12 @@
 
 import UIKit
 
-class ResultsTableViewController: UITableViewController {
+class ResultsTableViewController: UITableViewController, PTPusherDelegate {
 
+    
+    var channel: PTPusherChannel?
+    var client: AnyObject?
+    
     @IBOutlet weak var preResults: UIView!
     
     var items = [[String:String]]()
@@ -23,7 +27,8 @@ class ResultsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.dodgyUiShit()
-        
+        registerChannel()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -31,6 +36,19 @@ class ResultsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    func registerChannel() {
+        client = PTPusher.pusherWithKey("4887a850bf459bd31fc9", delegate: self)
+        client!.bindToEventNamed("shop", handleWithBlock: { event in
+            let data: AnyObject! = event.data;
+            println(data)
+        })
+        //        channel = self.client!.subscribeToChannelNamed("shopChannel")
+//        channel?.bindToEventNamed("shop", handleWithBlock: { channelEvent in
+//            let data: AnyObject! = channelEvent.data;
+//            println(data)
+//        })
+    }
+
     func dodgyUiShit() {
         let image = UIImage(named: "items");
         let frame = CGRect(origin: CGPoint(x: 10, y: 3), size: CGSize(width: 35, height: 35))
