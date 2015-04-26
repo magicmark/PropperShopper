@@ -160,6 +160,7 @@ extension SearchViewController: ConfirmItemDelegate {
 
 extension SearchViewController: SearchingDelegate {
     func searchDone () {
+        communicator.startSearch(currentItem!)
         let sb = UIStoryboard(name: "StoryboardBro", bundle: nil)
         let searchVC = sb.instantiateInitialViewController() as! UIViewController
         self.view.window?.rootViewController = searchVC;
