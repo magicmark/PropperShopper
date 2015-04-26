@@ -10,9 +10,13 @@ import UIKit
 
 class ResultsTableViewController: UITableViewController {
 
+    @IBOutlet weak var preResults: UIView!
+    
+    var items = [[String:String]]()
+    
     var dict: [Dictionary<String, String>] = [
-        ["name":"Location XYZ", "distance":"2 miles", "open":"till 21","price": "2.38$"],
-        ["name":"Location Super Uper", "distance":"2 miles", "open":"till 21","price": "2.38$"]
+       // ["name":"Location XYZ", "distance":"2 miles", "open":"till 21","price": "2.38$"],
+       // ["name":"Location Super Uper", "distance":"2 miles", "open":"till 21","price": "2.38$"]
     ]
     
     override func viewDidLoad() {
@@ -63,14 +67,14 @@ class ResultsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 2
+        return items.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("store-cell", forIndexPath: indexPath) as! UITableViewCell
 
-        let data = self.dict[indexPath.row]
+        let data = self.items[indexPath.row]
         
         let nameLabel = cell.viewWithTag(1) as! UILabel
         nameLabel.text = data["name"]

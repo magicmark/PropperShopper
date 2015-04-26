@@ -36,14 +36,17 @@ class ConfirmItem: UIViewController {
     }
     
     func toProper (result: String) -> String {
-        let lowercaseString = result.lowercaseString
-        return lowercaseString.stringByReplacingCharactersInRange(lowercaseString.startIndex...lowercaseString.startIndex, withString: String(lowercaseString[lowercaseString.startIndex]).uppercaseString)
-
+        if count(result) > 0 {
+            let lowercaseString = result.lowercaseString
+            return lowercaseString.stringByReplacingCharactersInRange(lowercaseString.startIndex...lowercaseString.startIndex, withString: String(lowercaseString[lowercaseString.startIndex]).uppercaseString)
+        } else {
+            return ""
+        }
     }
 
     func setItem (item: Item) {
         quantity.text = toProper("\(item.quantity)")
-        if count(item.name) == 0 { return }
+        //if count(item.name) == 0 { return }
         
         name.text = toProper(item.name)
         qualifier.text = item.qualifier
