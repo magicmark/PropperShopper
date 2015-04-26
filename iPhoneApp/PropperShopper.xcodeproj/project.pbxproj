@@ -38,6 +38,10 @@
 		4DF307FE1AEC677400B5B69B /* Searching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF307FD1AEC677400B5B69B /* Searching.swift */; };
 		98782A5688C645B3BB957920 /* libPods-PropperShopper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9B802F74DF45DD50B65296 /* libPods-PropperShopper.a */; };
 		C51840A31AECB0D9009AAD43 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51840A21AECB0D9009AAD43 /* CoreLocation.framework */; };
+		C5379E1B1AECC8F400FD33D7 /* StoreDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5379E1A1AECC8F400FD33D7 /* StoreDetailsViewController.swift */; };
+		C5379E211AECCAF600FD33D7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5379E201AECCAF600FD33D7 /* Store.swift */; };
+		C5379E251AECD05B00FD33D7 /* StoreCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5379E241AECD05B00FD33D7 /* StoreCollection.swift */; };
+		C5379E2C1AECD27200FD33D7 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5379E2B1AECD27200FD33D7 /* VCMapView.swift */; };
 		C5727E801AEC6B2300E64926 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5727E7F1AEC6B2300E64926 /* ResultsTableViewController.swift */; };
 		C5727E821AEC74CC00E64926 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5727E811AEC74CC00E64926 /* MapKit.framework */; };
 		C5A391271AEC3BF300B1DE6E /* StoryboardBro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A391261AEC3BF300B1DE6E /* StoryboardBro.storyboard */; };
@@ -133,6 +137,10 @@
 		4DFD6E831AECAA6600822744 /* PropperShopper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PropperShopper-Bridging-Header.h"; sourceTree = "<group>"; };
 		6677D0FF8E03AD725DFCA483 /* Pods-PropperShopper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PropperShopper.release.xcconfig"; path = "Pods/Target Support Files/Pods-PropperShopper/Pods-PropperShopper.release.xcconfig"; sourceTree = "<group>"; };
 		C51840A21AECB0D9009AAD43 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C5379E1A1AECC8F400FD33D7 /* StoreDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailsViewController.swift; sourceTree = "<group>"; };
+		C5379E201AECCAF600FD33D7 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		C5379E241AECD05B00FD33D7 /* StoreCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCollection.swift; sourceTree = "<group>"; };
+		C5379E2B1AECD27200FD33D7 /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
 		C5727E7F1AEC6B2300E64926 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		C5727E811AEC74CC00E64926 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C5A391261AEC3BF300B1DE6E /* StoryboardBro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardBro.storyboard; path = ../StoryboardBro.storyboard; sourceTree = "<group>"; };
@@ -211,6 +219,7 @@
 		4D5C871C1AEBD3B900D3A362 /* PropperShopper */ = {
 			isa = PBXGroup;
 			children = (
+				C5379E2A1AECD17D00FD33D7 /* Extensions */,
 				C5727E7E1AEC668600E64926 /* Fonts */,
 				4D067D8E1AEC7115006A2E22 /* Onboarders */,
 				4D7162E81AEC124300ED9B14 /* VoiceRecorder.swift */,
@@ -271,6 +280,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C5379E2A1AECD17D00FD33D7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C5379E2B1AECD27200FD33D7 /* VCMapView.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		C5727E7E1AEC668600E64926 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -293,6 +310,7 @@
 				4D7162E61AEBFED700ED9B14 /* SwiftyJSON.swift */,
 				4D5C87211AEBD3B900D3A362 /* ViewController.swift */,
 				4DFD6E831AECAA6600822744 /* PropperShopper-Bridging-Header.h */,
+				C5379E1A1AECC8F400FD33D7 /* StoreDetailsViewController.swift */,
 				4DA3C1261AECBC2900D1A561 /* ResultNavigation.swift */,
 			);
 			name = Controller;
@@ -310,6 +328,8 @@
 		C5A391251AEC3BD100B1DE6E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C5379E201AECCAF600FD33D7 /* Store.swift */,
+				C5379E241AECD05B00FD33D7 /* StoreCollection.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -505,9 +525,13 @@
 				4D7162E91AEC124300ED9B14 /* VoiceRecorder.swift in Sources */,
 				4D5C87201AEBD3B900D3A362 /* AppDelegate.swift in Sources */,
 				C5727E801AEC6B2300E64926 /* ResultsTableViewController.swift in Sources */,
+				C5379E251AECD05B00FD33D7 /* StoreCollection.swift in Sources */,
 				4D067D941AEC712A006A2E22 /* onboard1.swift in Sources */,
 				4D7162C51AEBD63E00ED9B14 /* SearchViewController.swift in Sources */,
 				4D7162CE1AEBF9EF00ED9B14 /* Item.swift in Sources */,
+				C5379E2C1AECD27200FD33D7 /* VCMapView.swift in Sources */,
+				C5379E211AECCAF600FD33D7 /* Store.swift in Sources */,
+				C5379E1B1AECC8F400FD33D7 /* StoreDetailsViewController.swift in Sources */,
 				4D067D9C1AEC7188006A2E22 /* onboard3.swift in Sources */,
 				4D7162E71AEBFED700ED9B14 /* SwiftyJSON.swift in Sources */,
 				4DF307F61AEC4B2600B5B69B /* ConfirmItem.swift in Sources */,
