@@ -34,11 +34,34 @@ class ConfirmItem: UIViewController {
         productShot.layer.masksToBounds = true
         // Do any additional setup after loading the view.
     }
+    
+    func toProper (result: String) -> String {
+        let lowercaseString = result.lowercaseString
+        return lowercaseString.stringByReplacingCharactersInRange(lowercaseString.startIndex...lowercaseString.startIndex, withString: String(lowercaseString[lowercaseString.startIndex]).uppercaseString)
+
+    }
 
     func setItem (item: Item) {
-        quantity.text = "\(item.quantity)"
-        name.text = item.name
+        quantity.text = toProper("\(item.quantity)")
+        name.text = toProper(item.name)
         qualifier.text = item.qualifier
+        downloadImage(item.imgurl)
+    }
+    
+    
+    func getDataFromUrl(url:String, completion: ((data: NSData?) -> Void)) {
+        NSURLSession.sharedSession().dataTaskWithURL(NSURL(string: url)!) { (data, response, error) in
+            completion(data: NSData(data: data))
+            }.resume()
+    }
+    
+    func downloadImage(url:String){
+        getDataFromUrl(url) { data in
+            dispatch_async(dispatch_get_main_queue()) {
+                self.productShot.contentMode = .ScaleAspectFill
+                self.productShot.image = UIImage(data: data!)
+            }
+        }
     }
     
     @IBAction func confirm(sender: AnyObject) {
