@@ -170,9 +170,12 @@ extension SearchViewController: ConfirmItemDelegate {
 extension SearchViewController: SearchingDelegate {
     func searchDone () {
         let sb = UIStoryboard(name: "StoryboardBro", bundle: nil)
-        let searchVC = sb.instantiateInitialViewController() as! UIViewController
+        let searchVC = sb.instantiateInitialViewController() as! UINavigationController
+        let x = searchVC.viewControllers.first as! ResultsTableViewController
+        x.item = currentItem
+        
         self.view.window?.rootViewController = searchVC;
-        (searchVC as! ResultsTableViewController).item = currentItem!
+
     }
 }
 
