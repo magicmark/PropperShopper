@@ -12,4 +12,5 @@ struct Item {
     var name: String
     var quantity: Int
     var qualifier: String
+    var imgurl: String
 }

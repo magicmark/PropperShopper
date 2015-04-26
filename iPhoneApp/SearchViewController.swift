@@ -122,10 +122,10 @@ extension SearchViewController: CommunicatorDelegate {
             self.activityIndicator.stopAnimating()
         
         
-            let result = JSON(data: data)
+            let result = JSON(data: data)["obj"]
             println(result)
             
-            var item = Item(name: result["name"].stringValue, quantity: result["quantity"].intValue, qualifier: result["qualifier"].stringValue)
+            var item = Item(name: result["name"].stringValue, quantity: result["quantity"].intValue, qualifier: result["qualifier"].stringValue, imgurl: result["imgurl"].stringValue)
             
             self.confirmItem.setItem(item)
             
@@ -137,7 +137,7 @@ extension SearchViewController: CommunicatorDelegate {
         
         })
 
-                
+        
     }
 }
 
