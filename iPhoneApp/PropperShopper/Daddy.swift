@@ -10,7 +10,7 @@ import UIKit
 
 class Daddy: UIViewController {
 
-    var searchVC: SearchViewController?
+    var searchVC: UIViewController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,5 +28,6 @@ class Daddy: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
 }
