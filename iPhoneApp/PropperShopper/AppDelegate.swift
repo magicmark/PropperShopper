@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     var locationM: CLLocationManager?
     var cords: CLLocation?
+    var pm: CLPlacemark?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -49,16 +50,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         self.cords = manager.location;
         self.locationM?.stopUpdatingLocation()
         
-//        CLGeocoder().reverseGeocodeLocation(
-//            manager.location,
-//            completionHandler: { (placemarks, NSError) -> Void in
-//                
-//            if placemarks.count > 0 {
-//                let pm = placemarks[0] as! CLPlacemark
-//                self.displayLocationInfo(pm)
-//
-//            }
-//        })
+        CLGeocoder().reverseGeocodeLocation(
+            manager.location,
+            completionHandler: { (placemarks, NSError) -> Void in
+                
+            if placemarks.count > 0 {
+                self.pm = placemarks[0] as? CLPlacemark
+            }
+        })
         
     }
     
