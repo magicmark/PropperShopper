@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import MapKit
 
 class ResultsTableViewController: UITableViewController, PTPusherDelegate {
 
@@ -49,12 +50,26 @@ class ResultsTableViewController: UITableViewController, PTPusherDelegate {
         
         channel!.bindToEventNamed("shop", handleWithBlock: { event in
 
-            let newShop: [String:String] = [
-                "name": event.data["shopname"] as! String,
-                "price": event.data["price"] as! String
-            ]
+           
+            println(event.data["location"]!)
+            let long = CLLocationDegrees((event.data["location"]!["lng"] as! Double))
+            let lat = CLLocationDegrees((event.data["location"]!["lat"] as! Double))
             
-            self.items.append(newShop)
+            
+            let coordinates     = CLLocationCoordinate2D(latitude: lat, longitude: long)
+            let newShopInstance = Store(name: event.data["shopname"] as! String, address: "London EUS", coordinate: coordinates, price: event.data["price"] as! String)
+            
+            let instance = StoreCollection.sharedInstance;
+            instance.addStore(newShopInstance)
+            
+//            
+//            
+//            let newShop: [String:String] = [
+//                "name": event.data["shopname"] as! String,
+//                "price": event.data["price"] as! String
+//            ]
+//            
+//            self.items.append(newShop)
             self.preResults.hidden = true // w/e
             self.tableView.reloadData()
             
@@ -99,19 +114,19 @@ class ResultsTableViewController: UITableViewController, PTPusherDelegate {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return items.count
+        return StoreCollection.sharedInstance.size()
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("store-cell", forIndexPath: indexPath) as! UITableViewCell
 
-        let data = self.items[indexPath.row]
-        
+        let data = StoreCollection.sharedInstance.getStore(indexPath.row)
+
         let nameLabel = cell.viewWithTag(1) as! UILabel
-        nameLabel.text = data["name"]
+        nameLabel.text = data.name
         
-        let price = data["price"]!.toInt()! / 100
+        let price = data.price.toInt()! / 100
         var formatter = NSNumberFormatter()
         formatter.numberStyle = .CurrencyStyle
         formatter.locale = NSLocale(localeIdentifier: "en_GB")
@@ -177,11 +192,15 @@ class ResultsTableViewController: UITableViewController, PTPusherDelegate {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
+        
+        // Get a next controller from segue
+        // Pass the store object to the next controller!
+        
         while let removeView = self.navigationController?.navigationBar.viewWithTag(999) {
             removeView.removeFromSuperview()
         }
 
+        
         
     }
     

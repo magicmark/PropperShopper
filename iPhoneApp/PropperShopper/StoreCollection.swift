@@ -15,7 +15,7 @@ class StoreCollection: NSObject {
     static let sharedInstance = StoreCollection()
     
     func addStore(store: Store) -> Int {
-        self.stores.append(store)
+        self.stores.insert(store, atIndex: 0)
         return self.size() - 1
     }
     
