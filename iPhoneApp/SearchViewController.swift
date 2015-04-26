@@ -164,6 +164,7 @@ extension SearchViewController: SearchingDelegate {
         let sb = UIStoryboard(name: "StoryboardBro", bundle: nil)
         let searchVC = sb.instantiateInitialViewController() as! UIViewController
         self.view.window?.rootViewController = searchVC;
+        (searchVC as! ResultsTableViewController).item = currentItem!
     }
 }
 
