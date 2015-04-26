@@ -12,4 +12,4 @@ SPEC CHECKSUMS:
   libPusher: f9367ede8f5141e74adc90ba20536cbc3c7b68e1
   SocketRocket: 7284ab9370a06c99aba92b2fe3a32aedd0f9a6fa
 
-COCOAPODS: 0.36.4
+COCOAPODS: 0.36.0.beta.2

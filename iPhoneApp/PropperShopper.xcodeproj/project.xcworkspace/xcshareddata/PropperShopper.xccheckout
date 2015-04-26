@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>DB266870-FDCC-4156-BE4C-5A67399E306A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>PropperShopper</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>E0E3723E375267906305410AA325E58143E9E3ED</key>
 		<string>github.com:magicmark/PropperShopper.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iPhoneApp/PropperShopper.xcodeproj</string>
+	<string>iPhoneApp/PropperShopper.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>E0E3723E375267906305410AA325E58143E9E3ED</key>
