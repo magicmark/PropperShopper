@@ -59,7 +59,7 @@ around you to find the item you are looking for.</string>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qDQ-UF-Cum">
                     <rect key="frame" x="-21" y="206" width="456" height="61"/>
-                    <string key="text">You will recieve notifications when new
+                    <string key="text">You will receive notifications when new
 results are available.</string>
                     <fontDescription key="fontDescription" name="NimbusSansNovusDOT-SemBol" family="Nimbus Sans Novus D OT" pointSize="19"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
