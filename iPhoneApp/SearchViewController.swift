@@ -9,8 +9,9 @@
 import UIKit
 import Alamofire
 
-class SearchViewController: UIViewController, RecorderDelegate {
+class SearchViewController: UIViewController {
 
+    
     @IBOutlet weak var listeningLabel: UILabel!
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var micButton: UIButton!
@@ -25,18 +26,38 @@ class SearchViewController: UIViewController, RecorderDelegate {
     var voiceRecorder = VoiceRecorder()
     var communicator = Communicator()
     var confirmItem = ConfirmItem(nibName: "ConfirmItem", bundle: nil)
+    var searching = Searching(nibName: "Searching", bundle: nil)
 
+    
+    var ob1 = onboard1(nibName: "onboard1", bundle: nil)
+    var ob2 = onboard2(nibName: "onboard2", bundle: nil)
+    var ob3 = onboard3(nibName: "onboard3", bundle: nil)
+    
+    @IBOutlet var pageViewController: UIPageViewController!
 
     var activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpSubviewsAndShit()
+    }
+    
+    func setUpSubviewsAndShit() {
         voiceRecorder.delegate = self
         communicator.delegate = self
+        confirmItem.delegate = self
+        
         setupActivityIndicator()
         self.addChildViewController(confirmItem)
         view.addSubview(confirmItem.view)
+        self.addChildViewController(searching)
+        view.addSubview(searching.view)
+        
+        
         confirmItem.view.frame = CGRectMake(0, UIScreen.mainScreen().bounds.height, UIScreen.mainScreen().bounds.width,  UIScreen.mainScreen().bounds.height)
+        searching.view.frame = CGRectMake(UIScreen.mainScreen().bounds.width, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)        
+        
+        self.pageViewController.setViewControllers([ob1], direction: .Forward, animated: true, completion: nil)
     }
 
     func setupActivityIndicator() {
@@ -52,7 +73,7 @@ class SearchViewController: UIViewController, RecorderDelegate {
         if voiceRecorder.isRecording {
             voiceRecorder.stop()
             micButton.setImage(UIImage(named: "micoff"), forState: .Normal)
-            itemObjectRecieved("dsfs")
+//            itemObjectRecieved("dsfs")
         } else {
             blackenView()
             voiceRecorder.record()
@@ -60,13 +81,7 @@ class SearchViewController: UIViewController, RecorderDelegate {
         }
     }
 
-    func finished(file: NSURL) {
-        dispatch_async(dispatch_get_main_queue(), {
-            self.activityIndicator.startAnimating()
-        })
-        communicator.sendVoice(file)
-        
-    }
+
     
     func blackenView () {
        
@@ -89,23 +104,108 @@ class SearchViewController: UIViewController, RecorderDelegate {
 
 }
 
+extension SearchViewController: RecorderDelegate {
+    func finished(file: NSURL) {
+        dispatch_async(dispatch_get_main_queue(), {
+            self.activityIndicator.startAnimating()
+        })
+        communicator.sendVoice(file)
+        
+    }
+}
+
 extension SearchViewController: CommunicatorDelegate {
-    func itemObjectRecieved(data: String) {
+    func itemObjectRecieved(data: NSData) {
+        
+        
         dispatch_async(dispatch_get_main_queue(), {
             self.activityIndicator.stopAnimating()
-        })
         
         
-        var item = Item(name: "Dildo", quantity: 28, qualifier: "Pink")
-        
-        confirmItem.setItem(item)
-        
-        UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            let result = JSON(data: data)
+            println(result)
             
-            self.confirmItem.view.frame = CGRectMake(0, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
+            var item = Item(name: result["name"].stringValue, quantity: result["quantity"].intValue, qualifier: result["qualifier"].stringValue)
             
+            self.confirmItem.setItem(item)
+            
+            UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                
+                self.confirmItem.view.frame = CGRectMake(0, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
+                
             }, completion: nil)
         
-        println(data)
+        })
+
+                
     }
+}
+
+extension SearchViewController: ConfirmItemDelegate {
+    func itemConfirmed() {
+        UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            
+            self.confirmItem.view.frame = CGRectMake(0-UIScreen.mainScreen().bounds.width, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
+            self.searching.view.frame = CGRectMake(0, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
+            
+            }, completion: nil)
+    }
+    func itemRejected() {
+        
+    }
+}
+
+extension SearchViewController: UIPageViewControllerDataSource {
+    
+
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        
+//        let pageIndex = (viewController as! OnBoarder).pageIndex;
+        
+        if let nibname = viewController.nibName {
+            switch nibname {
+                case "onboard1":
+                return nil
+            case "onboard2":
+                return ob1
+            case "onboard3":
+                return ob2
+            default:
+                return nil
+            }
+        }
+        
+        return nil
+    }
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        if let nibname = viewController.nibName {
+            switch nibname {
+            case "onboard1":
+                return ob2
+            case "onboard2":
+                return ob3
+            case "onboard3":
+                return nil
+            default:
+                return nil
+            }
+        }
+        
+        return nil
+    }
+}
+
+extension SearchViewController: UIPageViewControllerDelegate {
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 3
+    }
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 1
+    }
+//    func pageViewController(pageViewController: UIPageViewController, spineLocationForInterfaceOrientation orientation: UIInterfaceOrientation) -> UIPageViewControllerSpineLocation {
+//        self.pageViewController.doubleSided = false;
+//        //Return the spine location
+//        return UIPageViewControllerSpineLocation.Min
+//    }
 }

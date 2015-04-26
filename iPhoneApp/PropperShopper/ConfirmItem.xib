@@ -118,6 +118,9 @@
                     <state key="normal" image="tick">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="confirm:" destination="-1" eventType="touchUpInside" id="feN-8V-bPK"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzc-yr-Lzt">
                     <rect key="frame" x="67" y="505" width="280" height="47"/>

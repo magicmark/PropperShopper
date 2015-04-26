@@ -11,7 +11,6 @@ import UIKit
 class Daddy: UIViewController {
 
     var searchVC: UIViewController?
-    var sb: UIStoryboard?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +20,14 @@ class Daddy: UIViewController {
     }
     
     func initSubviewControllers () {
-//        searchVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
-        self.sb = UIStoryboard(name: "StoryboardBro", bundle: nil)
-        searchVC = self.sb?.instantiateInitialViewController() as! UIViewController
-        
+        searchVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
         self.addChildViewController(searchVC!)
-
         self.view.addSubview(searchVC!.view)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     
 }

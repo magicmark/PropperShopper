@@ -21,6 +21,7 @@
                 <outlet property="line2" destination="acF-St-ckQ" id="GKp-Fu-zbq"/>
                 <outlet property="listeningLabel" destination="Fwy-5h-eoX" id="1UX-6s-hh8"/>
                 <outlet property="micButton" destination="s6K-0C-nao" id="LVm-DD-6Cf"/>
+                <outlet property="pageViewController" destination="ota-Og-xRc" id="1Ct-DM-k3E"/>
                 <outlet property="searchField" destination="xvo-DG-vkj" id="mEF-Ir-81S"/>
                 <outlet property="textSearchEnter" destination="jm5-EP-tnx" id="kB6-N4-6E8"/>
                 <outlet property="topBlacker" destination="QJ5-SX-kW3" id="iZA-5f-kkz"/>
@@ -101,6 +102,14 @@
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
             <point key="canvasLocation" x="340" y="349"/>
         </view>
+        <pageViewController autoresizesArchivedViewToFullSize="NO" nibName="" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="ota-Og-xRc">
+            <connections>
+                <outlet property="dataSource" destination="-1" id="uAc-Sj-Et0"/>
+                <outlet property="delegate" destination="-1" id="kCS-52-eRS"/>
+                <outlet property="view" destination="wga-Dm-6mi" id="vrY-cv-gyD"/>
+            </connections>
+            <point key="canvasLocation" x="127" y="963"/>
+        </pageViewController>
     </objects>
     <resources>
         <image name="go" width="28" height="47"/>
