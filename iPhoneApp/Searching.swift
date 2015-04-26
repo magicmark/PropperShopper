@@ -17,5 +17,15 @@ class Searching: UIViewController {
     }
     
     
+    @IBAction func waitForResults(sender: AnyObject) {
+        
+        let sb = UIStoryboard(name: "StoryboardBro", bundle: nil)
+        let searchVC = sb.instantiateInitialViewController() as! UIViewController
+        
+        self.view.window?.rootViewController = searchVC;
+    
+    }
+    
+    
     
 }

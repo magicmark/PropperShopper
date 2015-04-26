@@ -43,6 +43,8 @@ class ConfirmItem: UIViewController {
 
     func setItem (item: Item) {
         quantity.text = toProper("\(item.quantity)")
+        if count(item.name) == 0 { return }
+        
         name.text = toProper(item.name)
         qualifier.text = item.qualifier
         downloadImage(item.imgurl)
