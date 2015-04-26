@@ -7,28 +7,31 @@
 //
 
 import UIKit
+import Foundation
 
 class ResultsTableViewController: UITableViewController, PTPusherDelegate {
 
-    
-    var channel: PTPusherChannel?
     var client: PTPusher?
     
     var item: Item?
+    var channel: PTPusherChannel?
     
     @IBOutlet weak var preResults: UIView!
     
     var items = [[String:String]]()
+    
     
     var dict: [Dictionary<String, String>] = [
        // ["name":"Location XYZ", "distance":"2 miles", "open":"till 21","price": "2.38$"],
        // ["name":"Location Super Uper", "distance":"2 miles", "open":"till 21","price": "2.38$"]
     ]
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.dodgyUiShit()
+        
         registerChannel()
 
         // Uncomment the following line to preserve selection between presentations
@@ -41,17 +44,22 @@ class ResultsTableViewController: UITableViewController, PTPusherDelegate {
     func registerChannel() {
         client = PTPusher.pusherWithKey("4887a850bf459bd31fc9", delegate: self, encrypted: true) as? PTPusher
         client!.connect()
-        client!.bindToEventNamed("shop", handleWithBlock: { event in
-            println("hello")
-            println("yo \(event)")
-            let data: AnyObject! = event.data;
-            println(data)
+        
+        channel = self.client?.subscribeToChannelNamed("shopChannel")
+        
+        channel!.bindToEventNamed("shop", handleWithBlock: { event in
+
+            let newShop: [String:String] = [
+                "name": event.data["shopname"] as! String,
+                "price": event.data["price"] as! String
+            ]
+            
+            self.items.append(newShop)
+            self.preResults.hidden = true // w/e
+            self.tableView.reloadData()
+            
         })
-        //        channel = self.client!.subscribeToChannelNamed("shopChannel")
-//        channel?.bindToEventNamed("shop", handleWithBlock: { channelEvent in
-//            let data: AnyObject! = channelEvent.data;
-//            println(data)
-//        })
+
     }
 
     func dodgyUiShit() {
@@ -64,8 +72,8 @@ class ResultsTableViewController: UITableViewController, PTPusherDelegate {
         
         let frame2 = CGRect(origin: CGPoint(x: 60, y: 5), size: CGSize(width: 100, height: 35))
         let name = UILabel(frame: frame2)
-        name.text = "2 Batteries"
-        name.text = "\(item.quantity) \(item.name)"
+
+        name.text = "\(self.item!.quantity) \(self.item!.name)"
         name.textColor = UIColor.whiteColor()
         
         self.navigationController?.navigationBar.addSubview(thumbnail)
@@ -103,15 +111,25 @@ class ResultsTableViewController: UITableViewController, PTPusherDelegate {
         let nameLabel = cell.viewWithTag(1) as! UILabel
         nameLabel.text = data["name"]
         
-        let distance = cell.viewWithTag(2) as! UILabel
-        distance.text = data["distance"]
+        let price = data["price"]!.toInt()! / 100
+        var formatter = NSNumberFormatter()
+        formatter.numberStyle = .CurrencyStyle
+        formatter.locale = NSLocale(localeIdentifier: "en_GB")
         
-        let open     = cell.viewWithTag(3) as! UILabel
-        open.text = data["open"]
-        
-        let price    = cell.viewWithTag(4) as! UILabel
-        price.text = data["price"]
-        
+        let priceLabel  = cell.viewWithTag(4) as! UILabel
+        priceLabel.text = formatter.stringFromNumber(price)
+
+
+//
+//        let distance = cell.viewWithTag(2) as! UILabel
+//        distance.text = data["distance"]
+//        
+//        let open     = cell.viewWithTag(3) as! UILabel
+//        open.text = data["open"]
+//        
+//        let price    = cell.viewWithTag(4) as! UILabel
+//        price.text = data["price"]
+//        
         
         return cell
         

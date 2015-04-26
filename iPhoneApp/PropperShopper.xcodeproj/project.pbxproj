@@ -31,6 +31,7 @@
 		4D7162F11AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7162EE1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf */; };
 		4D7162F21AEC3CF400ED9B14 /* NimbusSansNovusDOT-Med.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7162EF1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Med.otf */; };
 		4D7162F31AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7162F01AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf */; };
+		4DA3C1271AECBC2900D1A561 /* ResultNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3C1261AECBC2900D1A561 /* ResultNavigation.swift */; };
 		4DF307F61AEC4B2600B5B69B /* ConfirmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF307F41AEC4B2600B5B69B /* ConfirmItem.swift */; };
 		4DF307F71AEC4B2600B5B69B /* ConfirmItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */; };
 		4DF307FC1AEC676600B5B69B /* Searching.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DF307FB1AEC676600B5B69B /* Searching.xib */; };
@@ -126,6 +127,7 @@
 		4D7162EE1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-Lig.otf"; sourceTree = "<group>"; };
 		4D7162EF1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Med.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-Med.otf"; sourceTree = "<group>"; };
 		4D7162F01AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-Reg.otf"; sourceTree = "<group>"; };
+		4DA3C1261AECBC2900D1A561 /* ResultNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultNavigation.swift; sourceTree = "<group>"; };
 		4DF307F41AEC4B2600B5B69B /* ConfirmItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmItem.swift; sourceTree = "<group>"; };
 		4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmItem.xib; sourceTree = "<group>"; };
 		4DF307FB1AEC676600B5B69B /* Searching.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Searching.xib; sourceTree = "<group>"; };
@@ -296,6 +298,7 @@
 				4D5C87211AEBD3B900D3A362 /* ViewController.swift */,
 				4DFD6E831AECAA6600822744 /* PropperShopper-Bridging-Header.h */,
 				C5379E1A1AECC8F400FD33D7 /* StoreDetailsViewController.swift */,
+				4DA3C1261AECBC2900D1A561 /* ResultNavigation.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DA3C1271AECBC2900D1A561 /* ResultNavigation.swift in Sources */,
 				4D067D9F1AEC7B12006A2E22 /* OnBoarder.swift in Sources */,
 				4D067D981AEC7168006A2E22 /* onboard2.swift in Sources */,
 				4D7162CC1AEBF9E800ED9B14 /* Communicator.swift in Sources */,

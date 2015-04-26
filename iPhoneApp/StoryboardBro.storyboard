@@ -24,7 +24,6 @@
             <string>NimbusSansNovusDOT-Med</string>
             <string>NimbusSansNovusDOT-Med</string>
             <string>NimbusSansNovusDOT-Med</string>
-            <string>NimbusSansNovusDOT-Med</string>
         </mutableArray>
         <mutableArray key="NimbusSansNovusDOT-SemBol.otf">
             <string>NimbusSansNovusDOT-SemBol</string>
@@ -54,12 +53,24 @@
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H1H-t0-zic">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9O-do-pb7">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9O-do-pb7">
                                             <rect key="frame" x="36" y="242" width="342" height="66"/>
-                                            <string key="text">We are still waiting for the results to come.
+                                            <attributedString key="attributedText">
+                                                <fragment>
+                                                    <string key="content">We are still waiting for the results to come.
 please be patient!</string>
+
                                             <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Med" family="Nimbus Sans Novus D OT" pointSize="19"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+
+                                                    <attributes>
+                                                        <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <font key="NSFont" size="19" name="NimbusSansNovusDOT-Med"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shop-search-3x" translatesAutoresizingMaskIntoConstraints="NO" id="zM6-Aq-rOn">
@@ -144,12 +155,12 @@ please be patient!</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYf-iF-TMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1374" y="-61"/>
+            <point key="canvasLocation" x="-1375" y="-66"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Result Navigation-->
         <scene sceneID="49W-jL-fSb">
             <objects>
-                <navigationController id="eMv-Bi-bed" sceneMemberID="viewController">
+                <navigationController id="eMv-Bi-bed" customClass="ResultNavigation" customModule="PropperShopper" customModuleProvider="target" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jSZ-RP-LqE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
