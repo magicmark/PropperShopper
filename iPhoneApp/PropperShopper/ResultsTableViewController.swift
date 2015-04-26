@@ -27,6 +27,7 @@ class ResultsTableViewController: UITableViewController, PTPusherDelegate {
        // ["name":"Location Super Uper", "distance":"2 miles", "open":"till 21","price": "2.38$"]
     ]
     
+    @IBOutlet weak var resPostCode: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,11 @@ class ResultsTableViewController: UITableViewController, PTPusherDelegate {
         
         registerChannel()
 
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let pm = appDelegate.pm!
+        
+        self.resPostCode.text = "YOUR RESULTS AROUND \(pm.postalCode)"
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -193,12 +199,20 @@ class ResultsTableViewController: UITableViewController, PTPusherDelegate {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        // Get a next controller from segue
-        // Pass the store object to the next controller!
-        
-        while let removeView = self.navigationController?.navigationBar.viewWithTag(999) {
-            removeView.removeFromSuperview()
+        if (segue.identifier == "Details") {
+            
+            let instance = StoreCollection.sharedInstance;
+            
+            let vc   = segue.destinationViewController as! StoreDetailsViewController
+            let indexPath = self.tableView.indexPathForSelectedRow();
+            vc.store = instance.getStore(indexPath!.row)
+            
+            while let removeView = self.navigationController?.navigationBar.viewWithTag(999) {
+                removeView.removeFromSuperview()
+            }
         }
+        
+        
 
         
         

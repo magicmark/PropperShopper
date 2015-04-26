@@ -15,6 +15,7 @@ class StoreDetailsViewController: UIViewController {
     @IBOutlet weak var map: MKMapView!
     
     var geoloc: CLLocation?
+    var store: Store?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,19 +23,20 @@ class StoreDetailsViewController: UIViewController {
         
         self.map.delegate = self
         
-        let initialLocation = CLLocation(latitude: 21.282778, longitude: -157.829444)
-        
+        let initialLocation = self.store!.coordinate;
         
         let artwork = Store(
-            name: "Penis Town",
-            address: "Waikiki Gateway Park",
-            coordinate: CLLocationCoordinate2D(latitude: 21.283921, longitude: -157.831661),
-            price: "5000"
+            name: self.store!.name,
+            address: self.store!.address,
+            coordinate: initialLocation,
+            price: self.store!.price
         )
+        
+        let xyz = CLLocation(latitude: initialLocation.latitude, longitude: initialLocation.longitude)
         
         map.addAnnotation(artwork)
         
-        centerMapOnLocation(initialLocation)
+        centerMapOnLocation(xyz)
         
 
         

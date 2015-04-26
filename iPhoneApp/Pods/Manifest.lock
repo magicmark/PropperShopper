@@ -1,4 +1,36 @@
 PODS:
+  - Braintree (3.8.0-rc2):
+    - Braintree/API (= 3.8.0-rc2)
+    - Braintree/Coinbase (= 3.8.0-rc2)
+    - Braintree/Drop-In (= 3.8.0-rc2)
+    - Braintree/Payments (= 3.8.0-rc2)
+    - Braintree/PayPal (= 3.8.0-rc2)
+    - Braintree/UI (= 3.8.0-rc2)
+    - Braintree/Venmo (= 3.8.0-rc2)
+  - Braintree/API (3.8.0-rc2)
+  - Braintree/Coinbase (3.8.0-rc2):
+    - Braintree/API
+    - coinbase-official/OAuth (~> 2.1.1)
+  - Braintree/Drop-In (3.8.0-rc2):
+    - Braintree/API
+    - Braintree/Coinbase
+    - Braintree/Payments
+    - Braintree/PayPal
+    - Braintree/UI
+    - Braintree/Venmo
+  - Braintree/Payments (3.8.0-rc2):
+    - Braintree/API
+    - Braintree/Coinbase
+    - Braintree/PayPal
+    - Braintree/Venmo
+  - Braintree/PayPal (3.8.0-rc2):
+    - Braintree/API
+    - Braintree/UI
+  - Braintree/UI (3.8.0-rc2):
+    - Braintree/API
+  - Braintree/Venmo (3.8.0-rc2):
+    - Braintree/API
+  - coinbase-official/OAuth (2.1.2)
   - libPusher (1.6):
     - libPusher/Core (= 1.6)
   - libPusher/Core (1.6):
@@ -7,12 +39,15 @@ PODS:
   - SocketRocket (0.3.1-beta2)
 
 DEPENDENCIES:
+  - Braintree (= 3.8.0-rc2)
   - libPusher (~> 1.6)
   - MBProgressHUD (~> 0.8)
 
 SPEC CHECKSUMS:
+  Braintree: 107d22885e12c023b58809654447f4515ac68a75
+  coinbase-official: 36eb1ed3f43e8a5597ce89eac1e53f1a6d5a1af0
   libPusher: f9367ede8f5141e74adc90ba20536cbc3c7b68e1
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   SocketRocket: 7284ab9370a06c99aba92b2fe3a32aedd0f9a6fa
 
-COCOAPODS: 0.36.4
+COCOAPODS: 0.37.0.beta.1

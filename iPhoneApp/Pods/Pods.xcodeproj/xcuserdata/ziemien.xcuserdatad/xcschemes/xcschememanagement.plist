@@ -4,7 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-PropperShopper-Braintree-Braintree-Drop-In-Localization.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PropperShopper-Braintree-Braintree-UI-Localization.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PropperShopper-Braintree.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PropperShopper-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PropperShopper-SocketRocket.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PropperShopper-coinbase-official.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>8ACB75CBA45184E9206F3C41</key>
+		<key>115049C423183C128EBAAE59</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3D282C8F4456637B8B617A8</key>
+		<key>11C34F5D9DDA2E1F8BD78D22</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DAEC4262DD9299638F8ECD8F</key>
+		<key>20F59B2F5C88A4CAE34B5CA6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>21EC21CB3E83422DA3F3FBEA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5B41894E105E9322C244E746</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>922DC0959C77CC9A03D88CD9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9869DB83509201D312E75581</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EE6E1B981D2106FC4BFAEF81</key>
 		<dict>
 			<key>primary</key>
 			<true/>

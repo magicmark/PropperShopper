@@ -42,6 +42,7 @@
 		C5379E211AECCAF600FD33D7 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5379E201AECCAF600FD33D7 /* Store.swift */; };
 		C5379E251AECD05B00FD33D7 /* StoreCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5379E241AECD05B00FD33D7 /* StoreCollection.swift */; };
 		C5379E2C1AECD27200FD33D7 /* VCMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5379E2B1AECD27200FD33D7 /* VCMapView.swift */; };
+		C5379E361AECD8B900FD33D7 /* PaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5379E351AECD8B900FD33D7 /* PaymentViewController.m */; };
 		C5727E801AEC6B2300E64926 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5727E7F1AEC6B2300E64926 /* ResultsTableViewController.swift */; };
 		C5727E821AEC74CC00E64926 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5727E811AEC74CC00E64926 /* MapKit.framework */; };
 		C5A391271AEC3BF300B1DE6E /* StoryboardBro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A391261AEC3BF300B1DE6E /* StoryboardBro.storyboard */; };
@@ -141,6 +142,8 @@
 		C5379E201AECCAF600FD33D7 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		C5379E241AECD05B00FD33D7 /* StoreCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreCollection.swift; sourceTree = "<group>"; };
 		C5379E2B1AECD27200FD33D7 /* VCMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMapView.swift; sourceTree = "<group>"; };
+		C5379E341AECD8B900FD33D7 /* PaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaymentViewController.h; path = ../PaymentViewController.h; sourceTree = "<group>"; };
+		C5379E351AECD8B900FD33D7 /* PaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaymentViewController.m; path = ../PaymentViewController.m; sourceTree = "<group>"; };
 		C5727E7F1AEC6B2300E64926 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		C5727E811AEC74CC00E64926 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C5A391261AEC3BF300B1DE6E /* StoryboardBro.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = StoryboardBro.storyboard; path = ../StoryboardBro.storyboard; sourceTree = "<group>"; };
@@ -302,6 +305,8 @@
 		C5A391201AEC3B3300B1DE6E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C5379E341AECD8B900FD33D7 /* PaymentViewController.h */,
+				C5379E351AECD8B900FD33D7 /* PaymentViewController.m */,
 				4DF307F41AEC4B2600B5B69B /* ConfirmItem.swift */,
 				4DF307FD1AEC677400B5B69B /* Searching.swift */,
 				4D7162BF1AEBD59900ED9B14 /* Daddy.swift */,
@@ -529,6 +534,7 @@
 				4D067D941AEC712A006A2E22 /* onboard1.swift in Sources */,
 				4D7162C51AEBD63E00ED9B14 /* SearchViewController.swift in Sources */,
 				4D7162CE1AEBF9EF00ED9B14 /* Item.swift in Sources */,
+				C5379E361AECD8B900FD33D7 /* PaymentViewController.m in Sources */,
 				C5379E2C1AECD27200FD33D7 /* VCMapView.swift in Sources */,
 				C5379E211AECCAF600FD33D7 /* Store.swift in Sources */,
 				C5379E1B1AECC8F400FD33D7 /* StoreDetailsViewController.swift in Sources */,

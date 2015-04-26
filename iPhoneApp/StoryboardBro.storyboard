@@ -59,18 +59,13 @@
                                                 <fragment>
                                                     <string key="content">We are still waiting for the results to come.
 please be patient!</string>
-
-                                            <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Med" family="Nimbus Sans Novus D OT" pointSize="19"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-
                                                     <attributes>
-                                                        <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                        <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <font key="NSFont" size="19" name="NimbusSansNovusDOT-Med"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
-
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shop-search-3x" translatesAutoresizingMaskIntoConstraints="NO" id="zM6-Aq-rOn">
@@ -132,7 +127,7 @@ please be patient!</string>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="ftn-9n-Big" kind="show" id="Ivp-Vx-wNY"/>
+                                    <segue destination="ftn-9n-Big" kind="show" identifier="Details" id="Ivp-Vx-wNY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -151,6 +146,7 @@ please be patient!</string>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="preResults" destination="H1H-t0-zic" id="g1o-ze-ggt"/>
+                        <outlet property="resPostCode" destination="HC1-WP-zuO" id="6jv-au-0Dm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYf-iF-TMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -267,7 +263,7 @@ please be patient!</string>
         <!--Payment-->
         <scene sceneID="uE7-LR-2Sb">
             <objects>
-                <viewController title="Payment" id="kNe-VY-NYW" sceneMemberID="viewController">
+                <viewController title="Payment" id="kNe-VY-NYW" customClass="PaymentViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MUp-Ak-hoB"/>
                         <viewControllerLayoutGuide type="bottom" id="pqZ-bW-fZO"/>

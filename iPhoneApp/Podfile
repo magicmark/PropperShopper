@@ -3,6 +3,7 @@ platform :ios, '8.0'
 
 target 'PropperShopper' do
 pod 'libPusher', '~> 1.6'
+pod 'Braintree', '3.8.0-rc2'  # You can also specify a particular version here
 pod 'MBProgressHUD', '~> 0.8'
 end
 

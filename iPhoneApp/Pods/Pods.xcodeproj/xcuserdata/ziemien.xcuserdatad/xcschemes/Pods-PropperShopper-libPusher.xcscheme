@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8ACB75CBA45184E9206F3C41"
+               BlueprintIdentifier = "EE6E1B981D2106FC4BFAEF81"
                BuildableName = "libPods-PropperShopper-libPusher.a"
                BlueprintName = "Pods-PropperShopper-libPusher"
                ReferencedContainer = "container:Pods.xcodeproj">
