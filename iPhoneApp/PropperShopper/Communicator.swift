@@ -21,7 +21,7 @@ import Foundation
 import Alamofire
 
 protocol CommunicatorDelegate {
-    func itemObjectRecieved(data: String)
+    func itemObjectRecieved(data: NSData)
 }
 
 class Communicator: NSObject {
@@ -71,8 +71,8 @@ class Communicator: NSObject {
         var task = session.dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
             
             println("upload complete")
-            let dataStr = NSString(data: data, encoding: NSUTF8StringEncoding)! as String
-            self.delegate?.itemObjectRecieved(dataStr)
+            //let dataStr = NSString(data: data, encoding: NSUTF8StringEncoding)! as String
+            self.delegate?.itemObjectRecieved(data)
             
         })
         

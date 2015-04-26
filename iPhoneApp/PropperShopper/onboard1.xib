@@ -36,7 +36,7 @@
                 <constraint firstAttribute="centerX" secondItem="ALW-y0-BcJ" secondAttribute="centerX" constant="-4.5" id="Cx9-jZ-HQW"/>
                 <constraint firstAttribute="centerX" secondItem="mp1-rh-Fjg" secondAttribute="centerX" id="Y8N-H3-FPi"/>
                 <constraint firstItem="ALW-y0-BcJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="21" id="ZgJ-zO-5jq"/>
-                <constraint firstItem="ALW-y0-BcJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="21" id="mq8-wf-dKJ"/>
+                <constraint firstItem="ALW-y0-BcJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="26" id="mq8-wf-dKJ"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

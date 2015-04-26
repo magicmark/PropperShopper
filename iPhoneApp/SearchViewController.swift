@@ -73,7 +73,7 @@ class SearchViewController: UIViewController {
         if voiceRecorder.isRecording {
             voiceRecorder.stop()
             micButton.setImage(UIImage(named: "micoff"), forState: .Normal)
-            itemObjectRecieved("dsfs")
+//            itemObjectRecieved("dsfs")
         } else {
             blackenView()
             voiceRecorder.record()
@@ -115,25 +115,29 @@ extension SearchViewController: RecorderDelegate {
 }
 
 extension SearchViewController: CommunicatorDelegate {
-    func itemObjectRecieved(data: String) {
+    func itemObjectRecieved(data: NSData) {
+        
+        
         dispatch_async(dispatch_get_main_queue(), {
             self.activityIndicator.stopAnimating()
-        })
         
         
-        var item = Item(name: "Dildo", quantity: 28, qualifier: "Pink")
-        
-        confirmItem.setItem(item)
-        
-        UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+            let result = JSON(data: data)
+            println(result)
             
-            self.confirmItem.view.frame = CGRectMake(0, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
+            var item = Item(name: result["name"].stringValue, quantity: result["quantity"].intValue, qualifier: result["qualifier"].stringValue)
             
+            self.confirmItem.setItem(item)
+            
+            UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                
+                self.confirmItem.view.frame = CGRectMake(0, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
+                
             }, completion: nil)
         
-        
-        
-        println(data)
+        })
+
+                
     }
 }
 
