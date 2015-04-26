@@ -12,7 +12,9 @@ class ResultsTableViewController: UITableViewController, PTPusherDelegate {
 
     
     var channel: PTPusherChannel?
-    var client: AnyObject?
+    var client: PTPusher?
+    
+    var item: Item
     
     @IBOutlet weak var preResults: UIView!
     
@@ -37,8 +39,11 @@ class ResultsTableViewController: UITableViewController, PTPusherDelegate {
     }
     
     func registerChannel() {
-        client = PTPusher.pusherWithKey("4887a850bf459bd31fc9", delegate: self)
+        client = PTPusher.pusherWithKey("4887a850bf459bd31fc9", delegate: self, encrypted: true) as? PTPusher
+        client!.connect()
         client!.bindToEventNamed("shop", handleWithBlock: { event in
+            println("hello")
+            println("yo \(event)")
             let data: AnyObject! = event.data;
             println(data)
         })
@@ -60,6 +65,7 @@ class ResultsTableViewController: UITableViewController, PTPusherDelegate {
         let frame2 = CGRect(origin: CGPoint(x: 60, y: 5), size: CGSize(width: 100, height: 35))
         let name = UILabel(frame: frame2)
         name.text = "2 Batteries"
+        name.text = "\(item.quantity) \(item.name)"
         name.textColor = UIColor.whiteColor()
         
         self.navigationController?.navigationBar.addSubview(thumbnail)
