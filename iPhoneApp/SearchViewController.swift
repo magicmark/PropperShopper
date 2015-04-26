@@ -11,6 +11,7 @@ import Alamofire
 
 class SearchViewController: UIViewController {
 
+    var currentItem: Item?
     
     @IBOutlet weak var listeningLabel: UILabel!
     @IBOutlet weak var searchField: UITextField!
@@ -46,7 +47,7 @@ class SearchViewController: UIViewController {
         voiceRecorder.delegate = self
         communicator.delegate = self
         confirmItem.delegate = self
-        
+        searching.delegate = self
         setupActivityIndicator()
         self.addChildViewController(confirmItem)
         view.addSubview(confirmItem.view)
@@ -127,6 +128,8 @@ extension SearchViewController: CommunicatorDelegate {
             
             var item = Item(name: result["name"].stringValue, quantity: result["quantity"].intValue, qualifier: result["qualifier"].stringValue, imgurl: result["imgurl"].stringValue)
             
+            self.currentItem = item
+            
             self.confirmItem.setItem(item)
             
             UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
@@ -143,6 +146,7 @@ extension SearchViewController: CommunicatorDelegate {
 
 extension SearchViewController: ConfirmItemDelegate {
     func itemConfirmed() {
+        communicator.startSearch(currentItem!, coords: "51.5083,0.0594")
         UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             
             self.confirmItem.view.frame = CGRectMake(0-UIScreen.mainScreen().bounds.width, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
@@ -154,6 +158,15 @@ extension SearchViewController: ConfirmItemDelegate {
         
     }
 }
+
+extension SearchViewController: SearchingDelegate {
+    func searchDone () {
+        let sb = UIStoryboard(name: "StoryboardBro", bundle: nil)
+        let searchVC = sb.instantiateInitialViewController() as! UIViewController
+        self.view.window?.rootViewController = searchVC;
+    }
+}
+
 
 extension SearchViewController: UIPageViewControllerDataSource {
     

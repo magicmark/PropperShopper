@@ -36,7 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         self.locationM!.delegate = self;
         self.locationM!.desiredAccuracy = kCLLocationAccuracyBest
         self.locationM!.requestAlwaysAuthorization()
-
         self.locationM!.startUpdatingLocation()
     }
     

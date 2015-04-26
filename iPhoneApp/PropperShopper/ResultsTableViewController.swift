@@ -8,18 +8,27 @@
 
 import UIKit
 
-class ResultsTableViewController: UITableViewController {
+class ResultsTableViewController: UITableViewController, PTPusherDelegate {
 
+    
+    var channel: PTPusherChannel?
+    var client: AnyObject?
+    
+    @IBOutlet weak var preResults: UIView!
+    
+    var items = [[String:String]]()
+    
     var dict: [Dictionary<String, String>] = [
-        ["name":"Location XYZ", "distance":"2 miles", "open":"till 21","price": "2.38$"],
-        ["name":"Location Super Uper", "distance":"2 miles", "open":"till 21","price": "2.38$"]
+       // ["name":"Location XYZ", "distance":"2 miles", "open":"till 21","price": "2.38$"],
+       // ["name":"Location Super Uper", "distance":"2 miles", "open":"till 21","price": "2.38$"]
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.dodgyUiShit()
-        
+        registerChannel()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,6 +36,19 @@ class ResultsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    func registerChannel() {
+        client = PTPusher.pusherWithKey("4887a850bf459bd31fc9", delegate: self)
+        client!.bindToEventNamed("shop", handleWithBlock: { event in
+            let data: AnyObject! = event.data;
+            println(data)
+        })
+        //        channel = self.client!.subscribeToChannelNamed("shopChannel")
+//        channel?.bindToEventNamed("shop", handleWithBlock: { channelEvent in
+//            let data: AnyObject! = channelEvent.data;
+//            println(data)
+//        })
+    }
+
     func dodgyUiShit() {
         let image = UIImage(named: "items");
         let frame = CGRect(origin: CGPoint(x: 10, y: 3), size: CGSize(width: 35, height: 35))
@@ -63,14 +85,14 @@ class ResultsTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 2
+        return items.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("store-cell", forIndexPath: indexPath) as! UITableViewCell
 
-        let data = self.dict[indexPath.row]
+        let data = self.items[indexPath.row]
         
         let nameLabel = cell.viewWithTag(1) as! UILabel
         nameLabel.text = data["name"]

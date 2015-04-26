@@ -79,5 +79,22 @@ class Communicator: NSObject {
         task.resume()
 
     }
+    
+    func startSearch (item: Item, coords: String) {
+        let parameters: [String : AnyObject] = [
+            "name": item.name,
+            "quantity": item.quantity,
+            "qualifier": item.qualifier,
+            "coords": coords
+        ]
+        
+        Alamofire.request(.POST, "\(server)/findMeStuff", parameters: parameters)
+            .response { request, response, data, error in
+                
+        }
+
+        
+
+    }
         
 }

@@ -36,17 +36,20 @@ class ConfirmItem: UIViewController {
     }
     
     func toProper (result: String) -> String {
-        let lowercaseString = result.lowercaseString
-        return lowercaseString.stringByReplacingCharactersInRange(lowercaseString.startIndex...lowercaseString.startIndex, withString: String(lowercaseString[lowercaseString.startIndex]).uppercaseString)
-
+        if count(result) > 0 {
+            let lowercaseString = result.lowercaseString
+            return lowercaseString.stringByReplacingCharactersInRange(lowercaseString.startIndex...lowercaseString.startIndex, withString: String(lowercaseString[lowercaseString.startIndex]).uppercaseString)
+        } else {
+            return ""
+        }
     }
 
     func setItem (item: Item) {
-        quantity.text = toProper("\(item.quantity)")
-        if count(item.name) == 0 { return }
+        quantity.text = "\(item.quantity)"
+        //if count(item.name) == 0 { return }
         
         name.text = toProper(item.name)
-        qualifier.text = item.qualifier
+        qualifier.text = toProper(item.qualifier)
         downloadImage(item.imgurl)
     }
     
@@ -59,6 +62,7 @@ class ConfirmItem: UIViewController {
     
     func downloadImage(url:String){
         getDataFromUrl(url) { data in
+            println("got image")
             dispatch_async(dispatch_get_main_queue()) {
                 self.productShot.contentMode = .ScaleAspectFill
                 self.productShot.image = UIImage(data: data!)
