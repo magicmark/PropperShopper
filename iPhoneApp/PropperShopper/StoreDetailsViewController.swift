@@ -33,6 +33,8 @@ class StoreDetailsViewController: UIViewController {
         
         centerMapOnLocation(initialLocation)
         
+        self.map.delegate = self
+        
         // Do any additional setup after loading the view.
     }
 
