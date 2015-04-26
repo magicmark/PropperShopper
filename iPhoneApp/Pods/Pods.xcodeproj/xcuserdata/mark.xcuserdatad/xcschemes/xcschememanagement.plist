@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-PropperShopper-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PropperShopper-SocketRocket.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,32 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>38B544BEC33EC3CCFA5CF77D</key>
+		<key>43F18EE112D22FDEFAB29AB5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>810806EBBEACA1D08FFA5308</key>
+		<key>4ADE56BBB86F5E4D5EC7EA57</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8ACB75CBA45184E9206F3C41</key>
+		<key>51052BCCC100A2C0E3E88B35</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3D282C8F4456637B8B617A8</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DAEC4262DD9299638F8ECD8F</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E96C44BB70E65ECF3D8A89DA</key>
+		<key>B5F3ACE544C9CF92BC2E1FC2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

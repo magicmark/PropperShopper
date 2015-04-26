@@ -3,13 +3,16 @@ PODS:
     - libPusher/Core (= 1.6)
   - libPusher/Core (1.6):
     - SocketRocket (= 0.3.1-beta2)
+  - MBProgressHUD (0.9.1)
   - SocketRocket (0.3.1-beta2)
 
 DEPENDENCIES:
   - libPusher (~> 1.6)
+  - MBProgressHUD (~> 0.8)
 
 SPEC CHECKSUMS:
   libPusher: f9367ede8f5141e74adc90ba20536cbc3c7b68e1
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
   SocketRocket: 7284ab9370a06c99aba92b2fe3a32aedd0f9a6fa
 
-COCOAPODS: 0.36.0.beta.2
+COCOAPODS: 0.36.4
