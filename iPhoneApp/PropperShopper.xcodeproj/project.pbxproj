@@ -35,6 +35,7 @@
 		4DF307F71AEC4B2600B5B69B /* ConfirmItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */; };
 		4DF307FC1AEC676600B5B69B /* Searching.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DF307FB1AEC676600B5B69B /* Searching.xib */; };
 		4DF307FE1AEC677400B5B69B /* Searching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF307FD1AEC677400B5B69B /* Searching.swift */; };
+		C51840A31AECB0D9009AAD43 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C51840A21AECB0D9009AAD43 /* CoreLocation.framework */; };
 		98782A5688C645B3BB957920 /* libPods-PropperShopper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA9B802F74DF45DD50B65296 /* libPods-PropperShopper.a */; };
 		C5727E801AEC6B2300E64926 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5727E7F1AEC6B2300E64926 /* ResultsTableViewController.swift */; };
 		C5727E821AEC74CC00E64926 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5727E811AEC74CC00E64926 /* MapKit.framework */; };
@@ -127,6 +128,7 @@
 		4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmItem.xib; sourceTree = "<group>"; };
 		4DF307FB1AEC676600B5B69B /* Searching.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Searching.xib; sourceTree = "<group>"; };
 		4DF307FD1AEC677400B5B69B /* Searching.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Searching.swift; path = ../Searching.swift; sourceTree = "<group>"; };
+		C51840A21AECB0D9009AAD43 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4DFD6E831AECAA6600822744 /* PropperShopper-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PropperShopper-Bridging-Header.h"; sourceTree = "<group>"; };
 		6677D0FF8E03AD725DFCA483 /* Pods-PropperShopper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PropperShopper.release.xcconfig"; path = "Pods/Target Support Files/Pods-PropperShopper/Pods-PropperShopper.release.xcconfig"; sourceTree = "<group>"; };
 		C5727E7F1AEC6B2300E64926 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C51840A31AECB0D9009AAD43 /* CoreLocation.framework in Frameworks */,
 				C5727E821AEC74CC00E64926 /* MapKit.framework in Frameworks */,
 				98782A5688C645B3BB957920 /* libPods-PropperShopper.a in Frameworks */,
 			);
@@ -183,6 +186,7 @@
 		4D5C87111AEBD3B900D3A362 = {
 			isa = PBXGroup;
 			children = (
+				C51840A21AECB0D9009AAD43 /* CoreLocation.framework */,
 				4D2ABCA81AEC9897002AC648 /* Alamofire.xcodeproj */,
 				C5727E811AEC74CC00E64926 /* MapKit.framework */,
 				4D5C871C1AEBD3B900D3A362 /* PropperShopper */,

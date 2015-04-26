@@ -146,7 +146,15 @@ extension SearchViewController: CommunicatorDelegate {
 
 extension SearchViewController: ConfirmItemDelegate {
     func itemConfirmed() {
-        communicator.startSearch(currentItem!, coords: "51.5083,0.0594")
+        
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let cords = appDelegate.cords
+        
+        let cordsString = NSString(format: "%.5f,%.5f", cords!.coordinate.latitude,cords!.coordinate.longitude) as String
+        
+        println(cordsString)
+        
+        communicator.startSearch(currentItem!, coords: cordsString)
         UIView.animateWithDuration(0.3, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
             
             self.confirmItem.view.frame = CGRectMake(0-UIScreen.mainScreen().bounds.width, 150, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height)
