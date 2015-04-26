@@ -10,7 +10,8 @@ import UIKit
 
 class Daddy: UIViewController {
 
-    var searchVC: SearchViewController?
+    var searchVC: UIViewController?
+    var sb: UIStoryboard?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +21,12 @@ class Daddy: UIViewController {
     }
     
     func initSubviewControllers () {
-        searchVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
+//        searchVC = SearchViewController(nibName: "SearchViewController", bundle: nil)
+        self.sb = UIStoryboard(name: "StoryboardBro", bundle: nil)
+        searchVC = self.sb?.instantiateInitialViewController() as! UIViewController
+        
         self.addChildViewController(searchVC!)
+
         self.view.addSubview(searchVC!.view)
     }
 

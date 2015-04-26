@@ -1,35 +1,106 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eMv-Bi-bed">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="NimbusSansNovusDOT-Lig.otf">
+            <string>NimbusSansNovusDOT-Lig</string>
+            <string>NimbusSansNovusDOT-Lig</string>
+            <string>NimbusSansNovusDOT-Lig</string>
+            <string>NimbusSansNovusDOT-Lig</string>
+            <string>NimbusSansNovusDOT-Lig</string>
+            <string>NimbusSansNovusDOT-Lig</string>
+            <string>NimbusSansNovusDOT-Lig</string>
             <string>NimbusSansNovusDOT-Lig</string>
             <string>NimbusSansNovusDOT-Lig</string>
         </mutableArray>
         <mutableArray key="NimbusSansNovusDOT-Med.otf">
             <string>NimbusSansNovusDOT-Med</string>
             <string>NimbusSansNovusDOT-Med</string>
+            <string>NimbusSansNovusDOT-Med</string>
+            <string>NimbusSansNovusDOT-Med</string>
+            <string>NimbusSansNovusDOT-Med</string>
+            <string>NimbusSansNovusDOT-Med</string>
+            <string>NimbusSansNovusDOT-Med</string>
+            <string>NimbusSansNovusDOT-Med</string>
         </mutableArray>
         <mutableArray key="NimbusSansNovusDOT-SemBol.otf">
+            <string>NimbusSansNovusDOT-SemBol</string>
+            <string>NimbusSansNovusDOT-SemBol</string>
             <string>NimbusSansNovusDOT-SemBol</string>
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--Root View Controller-->
+        <!--Results Table View Controller-->
         <scene sceneID="J4n-za-0a2">
             <objects>
-                <tableViewController id="ShR-tR-M3k" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rdq-KC-7vE">
+                <tableViewController id="ShR-tR-M3k" customClass="ResultsTableViewController" customModule="PropperShopper" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" id="rdq-KC-7vE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="QRp-BO-Wc1">
+                            <rect key="frame" x="0.0" y="64" width="414" height="32"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YOUR RESULTS AROUND ES1 23E " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HC1-WP-zuO">
+                                    <rect key="frame" x="25" y="11" width="247" height="21"/>
+                                    <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Lig" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="rxR-76-4Pg">
+                            <rect key="frame" x="0.0" y="240" width="414" height="497"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oKC-L4-HVH">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="store-cell" rowHeight="110" id="oKC-L4-HVH">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oKC-L4-HVH" id="vXS-u0-4nq">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LZ-D2-elc">
+                                            <rect key="frame" x="25" y="36" width="72" height="21"/>
+                                            <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Lig" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0CV-ig-5Q7">
+                                            <rect key="frame" x="25" y="73" width="72" height="21"/>
+                                            <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Lig" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 mile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cvs-je-Sg3">
+                                            <rect key="frame" x="94" y="36" width="72" height="21"/>
+                                            <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Med" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="till 21" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FP8-2d-MtI">
+                                            <rect key="frame" x="94" y="55" width="72" height="21"/>
+                                            <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Med" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2.35" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfZ-tM-AbK">
+                                            <rect key="frame" x="94" y="73" width="72" height="21"/>
+                                            <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Med" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Open" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sv-k7-Dl2">
+                                            <rect key="frame" x="25" y="55" width="72" height="21"/>
+                                            <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Lig" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wonder Room Concept Store" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3CY-os-HWa">
+                                            <rect key="frame" x="25" y="13" width="381" height="21"/>
+                                            <fontDescription key="fontDescription" name="NimbusSansNovusDOT-SemBol" family="Nimbus Sans Novus D OT" pointSize="20"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="ftn-9n-Big" kind="show" id="Ivp-Vx-wNY"/>
@@ -41,7 +112,14 @@
                             <outlet property="delegate" destination="ShR-tR-M3k" id="xSh-kh-FK0"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="TIF-px-P8S"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="TIF-px-P8S">
+                        <barButtonItem key="rightBarButtonItem" image="end-3x" id="IYb-Oo-B89">
+                            <color key="tintColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sYf-iF-TMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,6 +133,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jSZ-RP-LqE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.21960784310000001" green="0.36862745099999999" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.46666666666666667" green="0.74117647058823533" blue="0.12941176470588237" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.21960784310000001" green="0.36862745099999999" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="ShR-tR-M3k" kind="relationship" relationship="rootViewController" id="jB9-3W-A5n"/>
@@ -62,12 +145,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="thm-gu-6c8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1986" y="-61"/>
+            <point key="canvasLocation" x="-1982" y="-61"/>
         </scene>
-        <!--Shop Details View-->
+        <!--Shop Details-->
         <scene sceneID="7nh-Tl-glE">
             <objects>
-                <viewController title="Shop Details View" id="ftn-9n-Big" sceneMemberID="viewController">
+                <viewController title="Shop Details" id="ftn-9n-Big" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kjS-2O-QPZ"/>
                         <viewControllerLayoutGuide type="bottom" id="p7V-zt-uRf"/>
@@ -75,16 +158,76 @@
                     <view key="view" contentMode="scaleToFill" id="iFY-67-RdG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GNC-M0-iom">
+                                <rect key="frame" x="0.0" y="-33" width="414" height="656"/>
+                                <color key="tintColor" red="0.2196078431372549" green="0.36862745098039218" blue="0.031372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4hI-PS-spV">
+                                <rect key="frame" x="0.0" y="624" width="414" height="115"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Distance:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zQP-0z-r78">
+                                        <rect key="frame" x="19" y="83" width="72" height="21"/>
+                                        <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Lig" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcG-FP-pkl">
+                                        <rect key="frame" x="19" y="45" width="72" height="21"/>
+                                        <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Lig" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2 mile" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbJ-hZ-SBx">
+                                        <rect key="frame" x="77" y="83" width="72" height="21"/>
+                                        <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Med" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="till 21" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n42-t7-lxL">
+                                        <rect key="frame" x="77" y="64" width="72" height="21"/>
+                                        <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Med" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="4" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2.35" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bG1-H6-Mbs">
+                                        <rect key="frame" x="77" y="45" width="72" height="21"/>
+                                        <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Med" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Open" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xld-SM-Z6s">
+                                        <rect key="frame" x="19" y="64" width="72" height="21"/>
+                                        <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Lig" family="Nimbus Sans Novus D OT" pointSize="12"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wonder Room Concept Store" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dd5-yt-vpI">
+                                        <rect key="frame" x="17" y="20" width="381" height="21"/>
+                                        <fontDescription key="fontDescription" name="NimbusSansNovusDOT-SemBol" family="Nimbus Sans Novus D OT" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="items" translatesAutoresizingMaskIntoConstraints="NO" id="IR6-dF-EIe">
+                                        <rect key="frame" x="340" y="22" width="51" height="68"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4hI-PS-spV" firstAttribute="top" secondItem="GNC-M0-iom" secondAttribute="bottom" id="Vfl-Ex-TCh"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Store Details" id="5KE-DP-Axz">
+                        <barButtonItem key="rightBarButtonItem" title="Pay" id="kfF-VY-AEb">
+                            <connections>
+                                <segue destination="kNe-VY-NYW" kind="show" id="C4g-c3-zVm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                    <connections>
-                        <segue destination="kNe-VY-NYW" kind="show" id="Pp3-Lt-vye"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yTC-pE-pUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-732" y="-61"/>
+            <point key="canvasLocation" x="-792" y="-53"/>
         </scene>
         <!--Payment-->
         <scene sceneID="uE7-LR-2Sb">
@@ -97,6 +240,17 @@
                     <view key="view" contentMode="scaleToFill" id="UEZ-s2-5e2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4Z-vN-bHq">
+                                <rect key="frame" x="178" y="402" width="90" height="30"/>
+                                <state key="normal" title="Pay That shit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="MU8-1Q-bGU" kind="showDetail" id="eje-NY-k0v"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
@@ -138,13 +292,13 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STORE DETAILS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fb-Du-J0J">
                                         <rect key="frame" x="25" y="20" width="78" height="21"/>
                                         <fontDescription key="fontDescription" name="NimbusSansNovusDOT-Lig" family="Nimbus Sans Novus D OT" pointSize="12"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fredericks of Wood Green LTD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8d-hO-KEg">
                                         <rect key="frame" x="25" y="45" width="367" height="21"/>
                                         <fontDescription key="fontDescription" name="NimbusSansNovusDOT-SemBol" family="Nimbus Sans Novus D OT" pointSize="16"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="389 High Rd" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0tS-jZ-MrD">
@@ -171,14 +325,18 @@
                                     <fragment>
                                         <string key="content">You are item will be waiting for collection in the store. We also sent you an reciepe for the item to the email: brave.pineapple@gmail.com</string>
                                         <attributes>
-                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="NimbusSansDOT-Regu"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineHeightMultiple="1.1000000000000001"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
-                                <color key="highlightedColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z5e-d9-CVn">
+                                <rect key="frame" x="0.0" y="-114" width="414" height="135"/>
+                                <color key="backgroundColor" red="0.46666666670000001" green="0.74117647060000003" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -186,10 +344,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clU-Va-ARW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="528" y="-61"/>
+            <point key="canvasLocation" x="523" y="-61"/>
         </scene>
     </scenes>
     <resources>
+        <image name="end-3x" width="29" height="29"/>
+        <image name="items" width="32" height="32"/>
         <image name="shop-icon" width="65" height="65"/>
         <image name="tick-good-3x" width="40" height="40"/>
     </resources>
