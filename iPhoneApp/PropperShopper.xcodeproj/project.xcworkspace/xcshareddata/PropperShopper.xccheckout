@@ -7,27 +7,39 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>DB266870-FDCC-4156-BE4C-5A67399E306A</string>
 	<key>IDESourceControlProjectName</key>
-	<string>PropperShopper</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>https://github.com/Alamofire/Alamofire.git</string>
 		<key>E0E3723E375267906305410AA325E58143E9E3ED</key>
-		<string>github.com:magicmark/PropperShopper.git</string>
+		<string>https://github.com/magicmark/PropperShopper.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iPhoneApp/PropperShopper.xcodeproj</string>
+	<string>iPhoneApp/PropperShopper.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
+		<string>../../..iPhoneApp/Alamofire/</string>
 		<key>E0E3723E375267906305410AA325E58143E9E3ED</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:magicmark/PropperShopper.git</string>
+	<string>https://github.com/magicmark/PropperShopper.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
 	<string>E0E3723E375267906305410AA325E58143E9E3ED</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>67620B5EFA902936DF04070AF595B76AB0333747</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Alamofire</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

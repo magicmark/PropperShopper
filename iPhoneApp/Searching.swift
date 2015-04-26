@@ -9,7 +9,13 @@
 import UIKit
 import QuartzCore
 
+protocol SearchingDelegate {
+    func searchDone()
+}
+
 class Searching: UIViewController {
+    
+    var delegate: SearchingDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +24,13 @@ class Searching: UIViewController {
     
     
     @IBAction func waitForResults(sender: AnyObject) {
-        
+        delegate?.searchDone()
+        /*
         let sb = UIStoryboard(name: "StoryboardBro", bundle: nil)
         let searchVC = sb.instantiateInitialViewController() as! UIViewController
         
         self.view.window?.rootViewController = searchVC;
-    
+    */
     }
     
     
