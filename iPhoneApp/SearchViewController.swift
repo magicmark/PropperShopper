@@ -157,8 +157,6 @@ extension SearchViewController: CommunicatorDelegate {
         
         })
 
-        
-        
     }
 }
 

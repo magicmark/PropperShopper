@@ -31,6 +31,7 @@
 		4D7162F11AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7162EE1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf */; };
 		4D7162F21AEC3CF400ED9B14 /* NimbusSansNovusDOT-Med.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7162EF1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Med.otf */; };
 		4D7162F31AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4D7162F01AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf */; };
+		4D8AAB6A1AED07C400D1742B /* FinalUiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8AAB691AED07C400D1742B /* FinalUiViewController.swift */; };
 		4DA3C1271AECBC2900D1A561 /* ResultNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA3C1261AECBC2900D1A561 /* ResultNavigation.swift */; };
 		4DF307F61AEC4B2600B5B69B /* ConfirmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF307F41AEC4B2600B5B69B /* ConfirmItem.swift */; };
 		4DF307F71AEC4B2600B5B69B /* ConfirmItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */; };
@@ -130,6 +131,7 @@
 		4D7162EE1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Lig.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-Lig.otf"; sourceTree = "<group>"; };
 		4D7162EF1AEC3CF400ED9B14 /* NimbusSansNovusDOT-Med.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-Med.otf"; sourceTree = "<group>"; };
 		4D7162F01AEC3CF400ED9B14 /* NimbusSansNovusDOT-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NimbusSansNovusDOT-Reg.otf"; sourceTree = "<group>"; };
+		4D8AAB691AED07C400D1742B /* FinalUiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalUiViewController.swift; sourceTree = "<group>"; };
 		4DA3C1261AECBC2900D1A561 /* ResultNavigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultNavigation.swift; sourceTree = "<group>"; };
 		4DF307F41AEC4B2600B5B69B /* ConfirmItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmItem.swift; sourceTree = "<group>"; };
 		4DF307F51AEC4B2600B5B69B /* ConfirmItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfirmItem.xib; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				4DFD6E831AECAA6600822744 /* PropperShopper-Bridging-Header.h */,
 				C5379E1A1AECC8F400FD33D7 /* StoreDetailsViewController.swift */,
 				4DA3C1261AECBC2900D1A561 /* ResultNavigation.swift */,
+				4D8AAB691AED07C400D1742B /* FinalUiViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				C5379E251AECD05B00FD33D7 /* StoreCollection.swift in Sources */,
 				4D067D941AEC712A006A2E22 /* onboard1.swift in Sources */,
 				4D7162C51AEBD63E00ED9B14 /* SearchViewController.swift in Sources */,
+				4D8AAB6A1AED07C400D1742B /* FinalUiViewController.swift in Sources */,
 				4D7162CE1AEBF9EF00ED9B14 /* Item.swift in Sources */,
 				C5379E361AECD8B900FD33D7 /* PaymentViewController.m in Sources */,
 				C5379E2C1AECD27200FD33D7 /* VCMapView.swift in Sources */,

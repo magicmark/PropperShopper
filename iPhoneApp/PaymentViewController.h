@@ -12,5 +12,4 @@
 @interface PaymentViewController : UIViewController<BTDropInViewControllerDelegate>
 
 @property (nonatomic, strong) Braintree *braintree;
-
 @end

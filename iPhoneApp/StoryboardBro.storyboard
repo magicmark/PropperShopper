@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eMv-Bi-bed">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eMv-Bi-bed">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="NimbusSansNovusDOT-Lig.otf">
@@ -246,7 +246,7 @@ please be patient!</string>
                     <navigationItem key="navigationItem" title="Store Details" id="5KE-DP-Axz">
                         <barButtonItem key="rightBarButtonItem" title="Pay" id="kfF-VY-AEb">
                             <connections>
-                                <segue destination="kNe-VY-NYW" kind="show" id="C4g-c3-zVm"/>
+                                <segue destination="kNe-VY-NYW" kind="show" identifier="Payment" id="C4g-c3-zVm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -271,29 +271,21 @@ please be patient!</string>
                     <view key="view" contentMode="scaleToFill" id="UEZ-s2-5e2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4Z-vN-bHq">
-                                <rect key="frame" x="178" y="402" width="90" height="30"/>
-                                <state key="normal" title="Pay That shit">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="MU8-1Q-bGU" kind="showDetail" id="eje-NY-k0v"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="MU8-1Q-bGU" kind="showDetail" identifier="Finish" id="cM0-9k-JQL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xMw-Cb-bFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-85" y="-61"/>
+            <point key="canvasLocation" x="-101" y="-61"/>
         </scene>
         <!--Success-->
         <scene sceneID="iaL-bY-3Ua">
             <objects>
-                <viewController title="Success" id="MU8-1Q-bGU" sceneMemberID="viewController">
+                <viewController title="Success" id="MU8-1Q-bGU" customClass="FinalUiViewController" customModule="PropperShopper" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3YQ-bp-ifF"/>
                         <viewControllerLayoutGuide type="bottom" id="I0v-SA-t4e"/>
@@ -351,10 +343,9 @@ please be patient!</string>
                                 <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" minimumScaleFactor="1" preferredMaxLayoutWidth="301" translatesAutoresizingMaskIntoConstraints="NO" id="LoP-lV-vz4">
-                                <rect key="frame" x="55" y="184" width="305" height="72"/>
+                                <rect key="frame" x="56" y="184" width="305" height="72"/>
                                 <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">You are item will be waiting for collection in the store. We also sent you an reciepe for the item to the email: brave.pineapple@gmail.com</string>
+                                    <fragment content="You are item will be waiting for collection in the store. We also sent you an reciepe for the item to your email address.">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="15" name="NimbusSansDOT-Regu"/>
@@ -372,6 +363,9 @@ please be patient!</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="name" destination="s8d-hO-KEg" id="Z22-Y5-8tm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="clU-Va-ARW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

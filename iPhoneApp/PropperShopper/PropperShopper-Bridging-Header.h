@@ -4,3 +4,5 @@
 
 #import <Pusher/Pusher.h>
 #import "MBProgressHUD.h"
+#import <Braintree/Braintree.h>
+#import "PaymentViewController.h"

@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     var locationM: CLLocationManager?
     var cords: CLLocation?
     var pm: CLPlacemark?
+    
+    var currentStore: Store?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -29,7 +31,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         daddy?.view.frame = UIScreen.mainScreen().bounds;
         window?.rootViewController = daddy!;
         window?.makeKeyAndVisible()
+        
+        Braintree.setReturnURLScheme("Team-Goat.PropperShopper.payments")
+
         return true
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        return Braintree.handleOpenURL(url, sourceApplication: sourceApplication)
     }
     
     func location() {
